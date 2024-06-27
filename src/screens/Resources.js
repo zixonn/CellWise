@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-
+import PageBody from "../constants/PageBody"
 const Resources = () => {
   return (
-    <View>
-      <Text>Resources</Text>
-    </View>
+    <PageBody>
+      
+    </PageBody>
   )
 }
 

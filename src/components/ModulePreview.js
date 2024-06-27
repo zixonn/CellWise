@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import PageBody from "../constants/PageBody"
-const Learn = () => {
+
+const ModulePreview = () => {
   return (
-    <PageBody>
-      
-    </PageBody>
+    <View>
+      <Text>ModulePreview</Text>
+    </View>
   )
 }
 
-export default Learn
+export default ModulePreview
 
 const styles = StyleSheet.create({})

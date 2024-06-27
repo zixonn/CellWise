@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import PageBody from "../constants/PageBody"
-const Learn = () => {
+const Volunteer = () => {
   return (
     <PageBody>
       
@@ -9,6 +9,6 @@ const Learn = () => {
   )
 }
 
-export default Learn
+export default Volunteer
 
 const styles = StyleSheet.create({})

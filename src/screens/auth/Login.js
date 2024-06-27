@@ -1,13 +1,22 @@
-import { View, Text } from 'react-native'
+
 import React from 'react'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import auth from "../../../firebase"
+import LongButton from "../../components/LongButton.js"
+import CustomInput from "../../components/CusomInput.js"
+import PageBody from '../../constants/PageBody.js'
+import CustomText from '../../components/CustomText.js'
+import { Image } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 const Login = () => {
+  const nav = useNavigation()
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text>Login</Text>
-    </View>
+    <PageBody>
+      <Image source = {require("../../assets/images/logo.png")} resizeMode='contain' />
+      <CustomText>Login</CustomText>
+      <CustomInput placeholder = "Email"/>
+      <CustomInput placeholder = "Password"/>
+      <LongButton title = "Log in" onPress = {() => nav.navigate("TabNav",{screen:"Learn"})}/>
+    </PageBody>
   )
 }
  
