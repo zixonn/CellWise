@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View , Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 import {colors} from "../constants/Colors"
 import CustomText from "../components/CustomText"
+import { useNavigation } from '@react-navigation/native'
 
 const ModulePreview = (props) => {
+  const navigation  = useNavigation()
   return (
-    <View style = {[styles.con,props.style]}>
-        <CustomText margin={"3%"} fontFamily={"Rubik-Bold"} color={"white"} fontSize={"large"}>{props.label}</CustomText>
-    </View>
+    <TouchableOpacity onPress={ () => navigation.navigate("ModuleNav",{screen:"ArticleList"})} activeOpacity={0.8} style = {[styles.con,props.style]}>
+        <CustomText margin={"3%"}  fontFamily={"Rubik-Bold"} color={"white"} fontSize={"large"}>{props.label}</CustomText>
+    </TouchableOpacity>
   )
 }
 
@@ -19,7 +21,8 @@ const styles = StyleSheet.create({
     width:"90%",
     height:"25%",
     borderRadius:10,
-    flexDirection:"column",
-    marginVertical:"2%", alignSelf:"center"
+    marginVertical:"2%",
+    alignSelf:"center",
+    justifyContent:"flex-end"
   }
 })

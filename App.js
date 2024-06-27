@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import { View } from 'react-native';
+import ModuleNav from './src/nav/ModuleNav';
 
 export default function App() {
 
@@ -33,6 +34,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
         <Stack.Screen name="AuthNav" component={AuthNav} />
         <Stack.Screen name="TabNav" component={TabNav} />
+        <Stack.Screen name = "ModuleNav" component = {ModuleNav}/>
       </Stack.Navigator>
     </NavigationContainer>
   </View>

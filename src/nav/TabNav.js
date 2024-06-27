@@ -13,10 +13,12 @@ const TabNav = () => {
   return (
     <>
     <StatusBar style='light'/>
-    <Tabs.Navigator screenOptions={{gestureEnabled:false,headerStyle:{
-     backgroundColor:colors.lochmara,borderBottomRightRadius:10,borderBottomLeftRadius:10
-    },headerTitleStyle:{fontFamily:"Rubik-Medium",color:colors.white,fontSize:fontSizes.small}}}>
-        <Tabs.Screen name = "Learn" component={Learn} />
+    <Tabs.Navigator screenOptions={{
+    gestureEnabled:false,
+    headerStyle:{backgroundColor:colors.lochmara,borderBottomRightRadius:10,borderBottomLeftRadius:10},
+    headerTitleStyle:{fontFamily:"Rubik-Medium",color:colors.white,fontSize:fontSizes.small,alignSelf:"center"}
+    }}>
+        <Tabs.Screen name = "Learning Modules" component={Learn} />
         <Tabs.Screen name = "Resources" component={Resources} />
         <Tabs.Screen name = "Volunteer" component={Volunteer} />
     </Tabs.Navigator>

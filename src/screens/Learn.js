@@ -8,11 +8,11 @@ const Learn = () => {
     <PageBody>
       <ScrollView style = {{width:"100%"}} contentContainerStyle = {{flexGrow:1, alignItems:"center"}}>
         <View style = {{marginBottom:"110%",width:"100%"}}>
-          <ModulePreview label = "Overview" style = {{marginTop:"5%"}}/>
-          <ModulePreview label = "Symptoms"/>
-          <ModulePreview label = "Diagnosis"/>
-          <ModulePreview label = "Treatment"/>
-          <ModulePreview label = "Living With Sickle Cell"/>
+          <ModulePreview label = "Overview" style = {{marginTop:"5%"}} time = {"15 min"} bg = "bg1.png"/>
+          <ModulePreview label = "Symptoms"  time = {"15 min"}  bg = "bg1.png"/>
+          <ModulePreview label = "Diagnosis"  time = {"15 min"}  bg = "bg1.png"/>
+          <ModulePreview label = "Treatment"  time = {"15 min"}  bg = "bg1.png"/>
+          <ModulePreview label = "Living With Sickle Cell"  time = {"15 min"}  bg = "bg1.png"/>
         </View>
       </ScrollView>
     </PageBody>
