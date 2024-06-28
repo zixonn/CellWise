@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native'
 const Login = () => {
   const nav = useNavigation()
   return (
-    <PageBody>
+    <PageBody white>
       <Image source = {require("../../assets/images/logo.png")} resizeMode='contain' />
       <CustomText>Login</CustomText>
       <CustomInput placeholder = "Email"/>
