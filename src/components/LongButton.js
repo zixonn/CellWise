@@ -8,10 +8,10 @@ const LongButton = (props) => {
   return (
     <Button
     title={props.title}
-    titleStyle = {{color:colors.white, fontFamily:"Rubik-SemiBold",fontSize:fontSizes.small}}
-    containerStyle = {{borderRadius:10, width:"75%"}}
+    titleStyle = {{color:colors.white, fontFamily:"Rubik-SemiBold",fontSize:fontSizes.medium}}
+    containerStyle = {{borderRadius:10, width:"75%",margin:props.margin, marginTop:props.marginTop, marginBottom:props.marginBottom}}
+    buttonStyle = {{padding:"6%"}}
     color = {colors.lochmara}
-    size={'lg'}
     onPress={props.onPress}
     loading = {props.loading}
     activeOpacity={0.75}

@@ -3,28 +3,29 @@ import React from 'react'
 import { colors } from '../constants/Colors'
 import { fontSizes } from '../constants/FontSizes'
 
-const CusomInput = (props) => {
+const CustomInput = (props) => {
   return (
     <TextInput  
       placeholder= {props.placeholder}
       placeholderTextColor={colors.lightGray}
-      style = {styles.con}
+      style = {[styles.con]}
     />
   )
 }
 
-export default CusomInput
+export default CustomInput
 
 const styles = StyleSheet.create({
   con:{
-    width:"75%",
+    fontFamily:"Rubik-Regular",
+    fontSize:fontSizes.small,
     borderWidth:1,
     borderRadius:10,
     borderColor:colors.lightGray,
+    width:"75%",
     paddingHorizontal:"3%",
-    padding:"3%",
+    padding:"5%",
     color:colors.gray,
-    fontFamily:"Rubik-Regular",
-    fontSize:fontSizes.small
+    margin:'2%'
   }
 })
