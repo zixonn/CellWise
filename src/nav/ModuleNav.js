@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar'
 import { colors } from "../constants/Colors"
 import { fontSizes } from "../constants/FontSizes"
 import { Icon } from "@rneui/base"
+
 const ModuleNav = () => {
     const Stack = createStackNavigator()
   return (
@@ -16,7 +17,7 @@ const ModuleNav = () => {
           headerTitleStyle:{fontFamily:"Rubik-Medium",color:colors.white,fontSize:fontSizes.small,alignSelf:"center"},
           headerBackTitleVisible:false,headerBackImage: () => <Icon name = "arrow-back" color={colors.white} style={{marginLeft:"15%"}}/>
           }}>
-          <Stack.Screen name = "ArticleList" component={ArticleList}/>
+          <Stack.Screen name = "Articles" component={ArticleList}/>
         </Stack.Navigator>
     </>
   )

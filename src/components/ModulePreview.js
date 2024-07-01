@@ -11,8 +11,8 @@ const ModulePreview = (props) => {
       activeOpacity={0.8} 
       style={[styles.con, props.style]}
       onPress={() => navigation.navigate("ModuleNav", {
-        screen: "ArticleList",
-        params: { articleCount: props.articleCount }
+        screen: "Articles",
+        params: { articleInfo: props.articleInfo }
       })} 
     >
       <CustomText 
