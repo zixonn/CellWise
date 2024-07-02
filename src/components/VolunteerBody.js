@@ -4,13 +4,13 @@ import CustomText from './CustomText'
 import { colors } from '../constants/Colors'
 import { Icon } from '@rneui/base'
 
-const VolunteerBody = () => {
+const VolunteerBody = (props) => {
 
   return (
     <View style = {styles.con}>
-      <CustomText fontFamily={"Rubik-SemiBold"} color = {"lochmara"} fontSize={"medium"}>Hanover, MD</CustomText>
+      <CustomText fontFamily={"Rubik-SemiBold"} color = {"lochmara"} fontSize={"medium"}>{props.city}, {props.state}</CustomText>
       <CustomText marginTop={"2%"} fontFamily={"Rubik-Medium"} color = {"gray"} >
-        Sickle Cell Disease Association of America 
+        {props.organization}
       </CustomText>
       <TouchableOpacity style = {styles.box} activeOpacity={0.85}>
         <Icon name = "paper-plane" type = "entypo" color = {colors.white} size={20}/>

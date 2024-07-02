@@ -6,6 +6,7 @@ import { fontSizes } from '../constants/FontSizes'
 const CustomInput = (props) => {
   return (
     <TextInput  
+      onSubmitEditing={props.onSubmitEditing}
       textContentType="none"
       autoCorrect={false}
       maxLength={props.maxLength}
