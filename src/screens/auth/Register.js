@@ -24,7 +24,7 @@ const Register = () => {
       setRegError("Passwords do not match");
       return;
     }
-    if (firstName.length >= 1 || lastName.length >=1) {
+    if (firstName.length <= 1 || lastName.length <= 1) {
       setRegError("First or last name is too short");
       return;
     }

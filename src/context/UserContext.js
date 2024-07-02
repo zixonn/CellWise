@@ -1,7 +1,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { auth,db } from '../../firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword,signOut } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 
 const UserContext = createContext();
@@ -32,7 +32,7 @@ export const UserProvider = ({ children }) => {
         return "Error: Email is invalid"
     }
     if(msg.includes('(auth/invalid-credential)')){
-        return "Error: Password is invalid"
+        return "Error: Password is invalid or account doesn't exist"
     }
     if(msg.includes('(auth/too-many-requests)')){
         return "Access to this account has been temporarily disabled"
@@ -91,8 +91,22 @@ export const UserProvider = ({ children }) => {
     }
   };
 
+  const logOutUser = async (navFunc) => {
+    setLoading(true);
+    try {
+      await signOut(auth);
+      console.log("Signed out!")
+      setUser(null);
+      navFunc()
+    } catch (error) {
+      console.log("Sign out error: ", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <UserContext.Provider value={{ user, loading, logInUser, registerUser,authError,regError,setRegError }}>
+    <UserContext.Provider value={{ user, loading, logInUser, registerUser,authError,regError,setRegError,logOutUser, setAuthError }}>
       {children}
     </UserContext.Provider>
   );

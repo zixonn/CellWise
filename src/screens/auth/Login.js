@@ -14,7 +14,7 @@ const Login = () => {
   const nav = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { loading, logInUser, authError } = useUser();
+  const { loading, logInUser, authError, setAuthError } = useUser();
 
   return (
     <PageBody white>
@@ -31,16 +31,22 @@ const Login = () => {
         width={'75%'}
         fontFamily={'Rubik-Medium'}
         color={'lochmara'}
-        onPress={() => nav.navigate('ForgotPassword')}
+        onPress={() => {
+          nav.navigate('ForgotPassword')
+          setEmail(""); setPassword(""); setAuthError("");
+        }}
       >
         Forgot Password?
       </CustomText>
       <LongButton
-        disabled = {(email == "" || password == "") ? true : false}
+        disabled = {(email == "" || password == "" ) ? true : false}
         loading={loading}
         marginTop={'6%'}
         title='Log in'
-        onPress={() => logInUser(email, password,() => nav.navigate('TabNav', { screen: 'Learn' }))}
+        onPress={() => logInUser(email, password,() => {
+          nav.navigate('TabNav', { screen: 'Learn' })
+          setEmail(''); setPassword('');
+        })}
       />
       <CustomText fontSize={'small'} fontFamily={'Rubik-Bold'} color={'gray'} margin={'5%'}>
         or
@@ -54,7 +60,7 @@ const Login = () => {
       <CustomText fontFamily={'Rubik-Medium'} color={'lightGray'}>
         Don't have an account?
         <CustomText fontFamily={'Rubik-Medium'} color={'tangerine'} onPress={() => nav.navigate('Register')}>
-          {' '}
+       
           Register Now
         </CustomText>
       </CustomText>

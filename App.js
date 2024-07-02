@@ -32,16 +32,16 @@ export default function App() {
   
   return (
     <UserProvider>
-      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
-          <Stack.Screen name="AuthNav" component={AuthNav} />
-          <Stack.Screen name="TabNav" component={TabNav} />
-          <Stack.Screen name = "ModuleNav" component = {ModuleNav}/>
-        </Stack.Navigator>
-      </NavigationContainer>
-      </View>
-    </UserProvider>
+    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
+        <Stack.Screen name="AuthNav" component={AuthNav} />
+        <Stack.Screen name="TabNav" component={TabNav} />
+        <Stack.Screen name = "ModuleNav" component = {ModuleNav}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+    </View>
+  </UserProvider>
   );
 }
 

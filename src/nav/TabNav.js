@@ -7,11 +7,13 @@ import { colors } from "../constants/Colors";
 import { fontSizes } from "../constants/FontSizes";
 import { StatusBar } from 'expo-status-bar';
 import { Icon } from '@rneui/base';
-import { Text, View } from 'react-native';
-
+import { Alert, Text, View } from 'react-native';
+import { useUser } from '../context/UserContext';
+import { useNavigation } from '@react-navigation/native';
 const TabNav = () => {
   const Tabs = createBottomTabNavigator();
-
+  const {logOutUser} = useUser()
+  const nav = useNavigation()
   return (
     <>
       <StatusBar style='light' />
@@ -65,10 +67,32 @@ const TabNav = () => {
               </View>
             );
           },
-          tabBarLabel: () => null, // tabBarLabel is set to null as we are including it inside the tabBarIcon
+          tabBarLabel: () => null, 
         })}
       >
-        <Tabs.Screen name="Learning Modules" component={Learn} />
+         <Tabs.Screen 
+          name="Learning Modules" 
+          component={Learn} 
+          options={{
+            headerTitle: () => (
+              <View style={{ flexDirection: 'row', alignItems: 'center',width:"100%" }}>
+                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",left:"-85%"}} 
+                onPress={() => {
+                  Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
+                    {
+                      text: 'Yes',
+                      onPress: () => logOutUser(() => nav.navigate("AuthNav"))
+                    },
+                    {text: 'No'}
+                  ])
+                  }}/>
+                <Text style={{ color: colors.white, fontFamily: "Rubik-Medium", fontSize: fontSizes.small }}>
+                  Learning Modules
+                </Text>
+              </View>
+            ),
+          }}
+        />
         <Tabs.Screen name="Resources" component={Resources} />
         <Tabs.Screen name="Volunteer" component={Volunteer} />
       </Tabs.Navigator>

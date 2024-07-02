@@ -3,7 +3,9 @@ import React from 'react'
 import PageBody from "../constants/PageBody"
 import ModulePreview from "../components/ModulePreview"
 import { OverviewInfo ,SymptomsInfo ,TreatmentInfo ,DiagnosisInfo ,LivingInfo  } from '../constants/ModuleInfo'
+
 const Learn = () => {
+
   return (
     <PageBody>
       <ScrollView style = {{width:"100%"}} contentContainerStyle = {{flexGrow:1, alignItems:"center"}}>
