@@ -5,6 +5,7 @@ import { colors } from '../constants/Colors'
 import { Icon } from '@rneui/base'
 
 const VolunteerBody = () => {
+
   return (
     <View style = {styles.con}>
       <CustomText fontFamily={"Rubik-SemiBold"} color = {"lochmara"} fontSize={"medium"}>Hanover, MD</CustomText>
