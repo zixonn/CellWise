@@ -6,15 +6,14 @@ import CustomInput from "../components/CustomInput"
 import VolunteerBody from '../components/VolunteerBody'
 
 const Volunteer = () => {
-  const apiKey = process.env.EXPO_PUBLIC_API_KEY;
+  const apiUrl = process.env.EXPO_PUBLIC_API_URL;
   return (
     <PageBody>
       <View style = {styles.con}>
         <View style = {styles.topHalf}>
           <CustomText textAlign={"left"} width={"75%"} fontSize={"small"}  fontFamily={"Rubik-Medium"} color = {"gray"}>
-            Search For Opprotunities
+            Search For Opprotunities, {apiUrl}
           </CustomText>
-          <CustomText>{apiKey}</CustomText>
           <CustomInput placeholder = "Enter ZIP Code"/>
         </View>
         <View style = {styles.bottomHalf}>
