@@ -6,6 +6,12 @@ import { fontSizes } from '../constants/FontSizes'
 const CustomInput = (props) => {
   return (
     <TextInput  
+      textContentType="none"
+      autoCorrect={false}
+      maxLength={props.maxLength}
+      secureTextEntry = {props.secureTextEntry}
+      onChangeText={props.onChangeText}
+      value ={props.value}
       placeholder= {props.placeholder}
       placeholderTextColor={colors.lightGray}
       style = {[styles.con]}

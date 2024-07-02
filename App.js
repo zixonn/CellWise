@@ -7,6 +7,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import { View } from 'react-native';
 import ModuleNav from './src/nav/ModuleNav';
+import { UserProvider } from './src/context/UserContext';
 
 export default function App() {
 
@@ -30,15 +31,17 @@ export default function App() {
   }
   
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
-        <Stack.Screen name="AuthNav" component={AuthNav} />
-        <Stack.Screen name="TabNav" component={TabNav} />
-        <Stack.Screen name = "ModuleNav" component = {ModuleNav}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-  </View>
+    <UserProvider>
+      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
+          <Stack.Screen name="AuthNav" component={AuthNav} />
+          <Stack.Screen name="TabNav" component={TabNav} />
+          <Stack.Screen name = "ModuleNav" component = {ModuleNav}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+      </View>
+    </UserProvider>
   );
 }
 

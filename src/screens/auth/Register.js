@@ -1,37 +1,74 @@
-
-import React from 'react'
-import PageBody from '../../constants/PageBody'
-import CustomText from '../../components/CustomText'
-import CustomInput from '../../components/CustomInput'
-import LongButton from '../../components/LongButton'
-import AuthOption from '../../components/AuthOption'
-import { useNavigation } from '@react-navigation/native'
-import { Divider } from '@rneui/base'
-import { colors } from '../../constants/Colors'
-import { View } from 'react-native'
+import React, { useEffect, useState } from 'react';
+import { View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Divider } from '@rneui/base';
+import LongButton from '../../components/LongButton';
+import CustomInput from '../../components/CustomInput';
+import PageBody from '../../constants/PageBody';
+import CustomText from '../../components/CustomText';
+import AuthOption from '../../components/AuthOption';
+import { colors } from '../../constants/Colors';
+import { useUser } from '../../context/UserContext';
 
 const Register = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordConfirm, setPasswordConfirm] = useState('');
+  const { loading, registerUser, regError, setRegError } = useUser();
+
+  const handleRegister = () => {
+    if (password !== passwordConfirm) {
+      setRegError("Passwords do not match");
+      return;
+    }
+    if (firstName.length >= 1 || lastName.length >=1) {
+      setRegError("First or last name is too short");
+      return;
+    }
+    registerUser(firstName, lastName, email, password, () => navigation.navigate('TabNav', { screen: 'Learn' }));
+  };
+
+  useEffect(() => {
+    setRegError('');
+  }, [firstName, lastName, email, password, passwordConfirm]);
+
   return (
-    <PageBody white> 
-      <CustomText marginBottom={"3%"} fontFamily={"Rubik-SemiBold"} fontSize={"XL"}>Sign Up</CustomText>
-      <CustomInput placeholder = "First name"/>
-      <CustomInput placeholder = "Last name"/>
-      <CustomInput placeholder = "Email"/>
-      <CustomInput placeholder = "Password"/>
-      <CustomInput placeholder = "Confirm Password"/>
-      <LongButton margin = {"2%"} marginBottom ={"5%"} title = "Register"/>
-      <Divider width = {1} color = {colors.lightGray} style = {{width:"85%"}}/>
-      <View style = {{flexDirection:"row", gap:"20%", marginTop:"5%", marginBottom:"5%"}}>
-        <AuthOption name = "google"/>
-        <AuthOption name = "facebook-square"/>
-        <AuthOption name = "apple1"/>
+    <PageBody white>
+      <CustomText marginBottom={'3%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
+        Sign Up
+      </CustomText>
+      <CustomText color={"tangerine"} fontFamily={'Rubik-Regular'}>{regError}</CustomText>
+      <CustomInput maxLength={25} placeholder='First name' value={firstName} onChangeText={setFirstName} />
+      <CustomInput maxLength={25} placeholder='Last name' value={lastName} onChangeText={setLastName} />
+      <CustomInput maxLength={50} placeholder='Email' value={email} onChangeText={setEmail} />
+      <CustomInput maxLength={50} placeholder='Password' secureTextEntry value={password} onChangeText={setPassword} />
+      <CustomInput maxLength={50} placeholder='Confirm Password' secureTextEntry value={passwordConfirm} onChangeText={setPasswordConfirm} />
+      <LongButton
+        disabled={(email === "" || password === "" || firstName === "" || lastName === "" || passwordConfirm === "") ? true : false}
+        loading={loading}
+        margin={'2%'}
+        marginBottom={'5%'}
+        title='Register'
+        onPress={handleRegister}
+      />
+      <Divider width={1} color={colors.lightGray} style={{ width: '85%' }} />
+      <View style={{ flexDirection: 'row', gap: '20%', marginTop: '5%', marginBottom: '5%' }}>
+        <AuthOption name='google' />
+        <AuthOption name='facebook-square' />
+        <AuthOption name='apple1' />
       </View>
-      <CustomText  fontFamily={"Rubik-Medium"} color = {"lightGray"}>Already have an account?
-        <CustomText fontFamily={"Rubik-Medium"} color = {"tangerine"} onPress = { () => navigation.goBack()}>  Log in</CustomText>
+      <CustomText fontFamily={'Rubik-Medium'} color={'lightGray'}>
+        Already have an account?
+        <CustomText fontFamily={'Rubik-Medium'} color={'tangerine'} onPress={() => navigation.goBack()}>
+          {' '}
+          Log in
+        </CustomText>
       </CustomText>
     </PageBody>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
