@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import AuthNav from './src/nav/AuthNav';
 import TabNav from './src/nav/TabNav';
 import { NavigationContainer } from '@react-navigation/native';
@@ -29,7 +29,7 @@ export default function App() {
   if (!fontsLoaded && !fontError) {
     return null;
   }
-  
+
   return (
     <UserProvider>
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>

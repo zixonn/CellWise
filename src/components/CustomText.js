@@ -4,12 +4,12 @@ import { colors } from '../constants/Colors'
 import { fontSizes } from '../constants/FontSizes'
 
 const CustomText = ({children,color,fontSize,fontFamily,margin,marginTop,marginBottom,marginLeft,marginRight,padding,alignSelf,onPress,
-  width,textAlign
+  width,textAlign,top,left,position
 }) => {
   return (
     <Text onPress={onPress} style = {{color:colors[color], fontSize:fontSizes[fontSize], fontFamily:fontFamily, 
       margin:margin, marginTop:marginTop, marginBottom:marginBottom, marginLeft:marginLeft,marginRight:marginRight, padding:padding,
-      alignSelf:alignSelf,width:width,textAlign:textAlign
+      alignSelf:alignSelf,width:width,textAlign:textAlign,top:top,left:left,position:position
     }}>
       {children}
     </Text>

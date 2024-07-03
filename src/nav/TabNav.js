@@ -43,8 +43,8 @@ const TabNav = () => {
               iconName = 'school';
             } else if (route.name === 'Resources') {
               iconName = 'book';
-            } else if (route.name === 'Volunteer') {
-              iconName = 'people';
+            } else if (route.name === 'Organizations') {
+              iconName = 'business';
             }
 
             return (
@@ -94,7 +94,7 @@ const TabNav = () => {
           }}
         />
         <Tabs.Screen name="Resources" component={Resources} />
-        <Tabs.Screen name="Volunteer" component={Volunteer} />
+        <Tabs.Screen name="Organizations" component={Volunteer} />
       </Tabs.Navigator>
     </>
   );

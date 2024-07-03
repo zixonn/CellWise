@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Image, View } from 'react-native';
+import { Image, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Divider } from '@rneui/base';
+import { Divider, Icon } from '@rneui/base';
 import LongButton from '../../components/LongButton';
 import CustomInput from '../../components/CustomInput';
 import PageBody from '../../constants/PageBody';
@@ -18,24 +18,24 @@ const Login = () => {
 
   return (
     <PageBody white>
+      <TouchableOpacity
+       style = {{position:"absolute", top:'2%',left:"3%",justifyContent:"center",alignItems:"center"}}
+       activeOpacity={0.8} onPress={() => nav.navigate("TabNav")}
+       > 
+        <Icon name = "guest" color = "black" size = {20} type = "zocial" />
+        <CustomText margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
+      </TouchableOpacity>
       <Image source={require('../../assets/images/logo.png')} resizeMode='contain' />
-      <CustomText margin={'5%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
+      <CustomText margin={'3%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
         Log In
       </CustomText>
       <CustomText color={"tangerine"} fontFamily={'Rubik-Regular'}>{authError}</CustomText>
       <CustomInput maxLength = {50} placeholder='Email' value={email} onChangeText={setEmail} />
       <CustomInput  maxLength = {50} placeholder='Password' secureTextEntry value={password} onChangeText={setPassword} />
-      <CustomText
-        marginTop={'2%'}
-        textAlign={'right'}
-        width={'75%'}
-        fontFamily={'Rubik-Medium'}
-        color={'lochmara'}
-        onPress={() => {
-          nav.navigate('ForgotPassword')
+      <CustomText marginTop={'2%'} textAlign={'right'} width={'75%'} fontFamily={'Rubik-Medium'} color={'lochmara'}
+        onPress={() => { nav.navigate('ForgotPassword')
           setEmail(""); setPassword(""); setAuthError("");
-        }}
-      >
+        }}>
         Forgot Password?
       </CustomText>
       <LongButton
@@ -60,7 +60,6 @@ const Login = () => {
       <CustomText fontFamily={'Rubik-Medium'} color={'lightGray'}>
         Don't have an account?
         <CustomText fontFamily={'Rubik-Medium'} color={'tangerine'} onPress={() => nav.navigate('Register')}>
-       
           Register Now
         </CustomText>
       </CustomText>

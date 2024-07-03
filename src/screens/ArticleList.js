@@ -3,18 +3,22 @@ import React from 'react';
 import PageBody from '../constants/PageBody';
 import { colors } from '../constants/Colors';
 import CustomText from '../components/CustomText';
+import { useNavigation } from '@react-navigation/native';
 
-const ArticleList = ({ route, navigation }) => {
+const ArticleList = ({ route }) => {
   
   const { articleInfo } = route.params;
+  const navigation = useNavigation()
 
   return (
-    <PageBody>
+    <PageBody white>
       <View style = {styles.titleCon}>
       {
           articleInfo.titles.map((title) =>
-            <TouchableOpacity style = {{padding:"3%", alignSelf:"flex-start",borderTopWidth:1,width:"100%",borderColor:colors.lightGray}}>
-              <CustomText alignSelf={"flex-start"} color = {"gray"} fontFamily={"Rubik-Regular"}>
+            <TouchableOpacity
+             onPress={() => navigation.navigate("Article",{articleTitle:title})}
+             style = {{padding:"3%", alignSelf:"flex-start",borderTopWidth:1,width:"100%",borderColor:colors.lightGray}}>
+              <CustomText alignSelf={"flex-start"} color = {"gray"} fontFamily={"Rubik-Regular"}key={title}>
                 {title}
               </CustomText>
             </TouchableOpacity>

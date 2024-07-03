@@ -24,15 +24,31 @@ const Volunteer = () => {
   };
 
   const capitalizeFirstLetter = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
   };
+  
+  const getWebsiteUrl = (company) => {
+    if (company.website) {
+      return `https://${company.website}`;
+    } else if (company.profiles && company.profiles.length > 0) {
+      for (let profile of company.profiles) {
+        if (profile.startsWith("http")) {
+          return profile; 
+        }
+      }
+      return `https://www.${company.linkedin_slug}`;
+    } else {
+      return 'https://example.com';
+    }
+  };
+  
 
   return (
     <PageBody>
       <View style={styles.con}>
         <View style={styles.topHalf}>
           <CustomText textAlign="left" width="75%" fontSize="small" fontFamily="Rubik-Medium" color="gray">
-            Search For Opportunities
+            Search For Health Organizations
           </CustomText>
           <TextInput
             style={styles.input}
@@ -50,6 +66,7 @@ const Volunteer = () => {
               <View style={{ marginBottom: '25%', width: '100%' }}>
                 {companies.map(company => (
                   <VolunteerBody
+                    url={getWebsiteUrl(company)}
                     key={company.id}
                     city={company.location?.locality ? capitalizeFirstLetter(company.location.locality) : 'N/A'}
                     state={company.location?.region ? capitalizeFirstLetter(company.location.region) : 'N/A'}
@@ -83,10 +100,11 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   input: {
-    borderColor: 'gray',
+    borderColor: 'lightGray',
     borderWidth: 1,
     width: '75%',
-    padding: 10,
-    marginVertical: 10,
+    padding: "3%",
+    marginVertical: "2%",
+    fontFamily: "Rubik-Regular"
   },
 });
