@@ -25,8 +25,8 @@ const Login = () => {
         <Icon name = "guest" color = "black" size = {20} type = "zocial" />
         <CustomText margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
       </TouchableOpacity>
-      <Image source={require('../../assets/images/logo.png')} resizeMode='contain' />
-      <CustomText margin={'3%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
+      <Image source={require('../../assets/images/logo.png')} resizeMode='contain' style ={{transform:[{scale:0.5}],margin:"-30%"}} />
+      <CustomText margin={'2.5%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
         Log In
       </CustomText>
       <CustomText color={"tangerine"} fontFamily={'Rubik-Regular'}>{authError}</CustomText>
