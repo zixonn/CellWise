@@ -1,9 +1,9 @@
 import { ScrollView, StyleSheet, View, TextInput, Button, Alert, ActivityIndicator } from 'react-native';
 import React, { useState } from 'react';
-import PageBody from '../constants/PageBody';
+import PageBody from '../util//constants/PageBody';
 import CustomText from '../components/CustomText';
 import VolunteerBody from '../components/VolunteerBody';
-import { searchCompanies } from '../context/api';
+import { searchCompanies } from '../util/functions/api';
 
 const Volunteer = () => {
   const [zipCode, setZipCode] = useState('');
@@ -51,6 +51,9 @@ const Volunteer = () => {
             Search For Health Organizations
           </CustomText>
           <TextInput
+            maxLength={5}
+            keyboardType='number-pad'
+            returnKeyType='done'
             style={styles.input}
             onSubmitEditing={handleSearch}
             value={zipCode}
@@ -92,7 +95,7 @@ const styles = StyleSheet.create({
   topHalf: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: '5%',
+    paddingVertical: '6%',
   },
   bottomHalf: {
     justifyContent: 'center',
@@ -100,11 +103,13 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   input: {
-    borderColor: 'lightGray',
+    borderColor: 'gray',
     borderWidth: 1,
+    borderRadius:10,
     width: '75%',
     padding: "3%",
     marginVertical: "2%",
-    fontFamily: "Rubik-Regular"
+    fontFamily: "Rubik-Regular",
+    color:"gray"
   },
 });

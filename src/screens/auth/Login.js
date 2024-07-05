@@ -4,10 +4,10 @@ import { useNavigation } from '@react-navigation/native';
 import { Divider, Icon } from '@rneui/base';
 import LongButton from '../../components/LongButton';
 import CustomInput from '../../components/CustomInput';
-import PageBody from '../../constants/PageBody';
+import PageBody from '../../util/constants/PageBody';
 import CustomText from '../../components/CustomText';
 import AuthOption from '../../components/AuthOption';
-import { colors } from '../../constants/Colors';
+import { colors } from '../../util/constants/Colors';
 import { useUser } from '../../context/UserContext';
 
 const Login = () => {

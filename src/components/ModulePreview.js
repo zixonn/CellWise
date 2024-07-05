@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import React from 'react';
-import { colors } from "../constants/Colors";
+import { colors } from '../util/constants/Colors'
 import CustomText from "../components/CustomText";
 import { useNavigation } from '@react-navigation/native';
 

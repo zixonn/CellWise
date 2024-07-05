@@ -1,11 +1,11 @@
-import ArticleList from "../screens/ArticleList"
-import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
+import { createStackNavigator } from '@react-navigation/stack'
 import { StatusBar } from 'expo-status-bar'
-import { colors } from "../constants/Colors"
-import { fontSizes } from "../constants/FontSizes"
+import { colors } from "../util/constants/Colors"
+import { fontSizes } from "../util/constants/FontSizes"
 import { Icon } from "@rneui/base"
-import Article from "../screens/Article"
+import Article from "../screens/articles/Article"
+import ArticleList from "../screens/articles/ArticleList"
 
 const ModuleNav = () => {
     const Stack = createStackNavigator()

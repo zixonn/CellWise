@@ -1,8 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
-import PageBody from '../constants/PageBody';
-import { colors } from '../constants/Colors';
-import CustomText from '../components/CustomText';
+import PageBody from '../../util/constants/PageBody';
+import { colors } from '../../util/constants/Colors';
+import CustomText from '../../components/CustomText';
 import { useNavigation } from '@react-navigation/native';
 
 const ArticleList = ({ route }) => {
@@ -14,11 +14,11 @@ const ArticleList = ({ route }) => {
     <PageBody white>
       <View style = {styles.titleCon}>
       {
-          articleInfo.titles.map((title) =>
+          articleInfo.titles.map((title,index) =>
             <TouchableOpacity
              onPress={() => navigation.navigate("Article",{articleTitle:title})}
              style = {{padding:"3%", alignSelf:"flex-start",borderTopWidth:1,width:"100%",borderColor:colors.lightGray}}>
-              <CustomText alignSelf={"flex-start"} color = {"gray"} fontFamily={"Rubik-Regular"}key={title}>
+              <CustomText alignSelf={"flex-start"} color = {"gray"} fontFamily={"Rubik-Regular"}key={index.toString()}>
                 {title}
               </CustomText>
             </TouchableOpacity>

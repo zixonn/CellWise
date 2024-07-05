@@ -2,9 +2,9 @@
 const OverviewInfo = {
     amount:3,
     titles:[
-        "What is Sickle Cell Disease?",
-        "What are its Causes?",
-        "Effects on the Body"
+        "What Is Sickle Cell Disease?",
+        "Causes of Sickle Cell",
+        "Effects On the Body"
     ]
 }
 const SymptomsInfo  = {

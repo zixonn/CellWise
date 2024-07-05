@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import React from 'react'
 import { Icon } from '@rneui/base'
-import { colors } from '../constants/Colors'
+import { colors } from '../util/constants/Colors'
 
 const AuthOption = (props) => {
   return (

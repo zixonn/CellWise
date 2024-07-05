@@ -1,8 +1,8 @@
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Button } from '@rneui/base'
-import { colors } from '../constants/Colors'
-import { fontSizes } from '../constants/FontSizes'
+import { colors } from '../util/constants/Colors'
+import { fontSizes } from '../util/constants/FontSizes'
 
 const LongButton = (props) => {
   return (

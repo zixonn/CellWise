@@ -1,8 +1,8 @@
 import { ScrollView, StyleSheet, View} from 'react-native'
 import React from 'react'
-import PageBody from "../constants/PageBody"
+import PageBody from "../util/constants/PageBody"
 import ModulePreview from "../components/ModulePreview"
-import { OverviewInfo ,SymptomsInfo ,TreatmentInfo ,DiagnosisInfo ,LivingInfo  } from '../constants/ModuleInfo'
+import { OverviewInfo ,SymptomsInfo ,TreatmentInfo ,DiagnosisInfo ,LivingInfo  } from '../util/constants/ModuleInfo'
 
 const Learn = () => {
 
@@ -13,11 +13,11 @@ const Learn = () => {
           <ModulePreview source = {require("../assets/images/overview.png")} label = "Overview" style = {{marginTop:"5%"}} time = {"15 min"} bg = "bg1.png"
            articleInfo = {OverviewInfo}/>
           <ModulePreview source = {require("../assets/images/symptoms.png")} label = "Symptoms"  time = {"15 min"}  bg = "bg1.png" 
-          articleInfo = {SymptomsInfo }/>
+          articleInfo = {SymptomsInfo}/>
           <ModulePreview source = {require("../assets/images/diagnosis.png")} label = "Diagnosis"  time = {"15 min"}  bg = "bg1.png" 
-          articleInfo = {DiagnosisInfo }/>
+          articleInfo = {DiagnosisInfo}/>
           <ModulePreview source = {require("../assets/images/treatment.png")} label = "Treatment"  time = {"15 min"}  bg = "bg1.png" 
-          articleInfo = {TreatmentInfo }/>
+          articleInfo = {TreatmentInfo}/>
           <ModulePreview source = {require("../assets/images/living.png")} label = "Living With Sickle Cell"  time = {"15 min"}  bg = "bg1.png" 
           articleInfo = {LivingInfo}/>
         </View>

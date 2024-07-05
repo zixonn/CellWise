@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import React from 'react'
-import { colors } from '../constants/Colors'
-import { fontSizes } from '../constants/FontSizes'
+import { colors } from '../util/constants/Colors'
+import { fontSizes } from '../util/constants/FontSizes'
 
 const CustomText = ({children,color,fontSize,fontFamily,margin,marginTop,marginBottom,marginLeft,marginRight,padding,alignSelf,onPress,
   width,textAlign,top,left,position

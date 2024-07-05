@@ -31,7 +31,6 @@ export const searchCompanies = async (zipCode) => {
           ],
         },
       },
-      size: 10, 
       _source: ['name', 'location.locality', 'location.region', 'location.country'],
     });
     return response.data;

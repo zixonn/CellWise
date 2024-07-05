@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native'
 import LongButton from '../../components/LongButton'
 import CustomInput from '../../components/CustomInput'
 import CustomText from '../../components/CustomText'
-import PageBody from '../../constants/PageBody'
+import PageBody from '../../util/constants/PageBody';
 import { sendPasswordResetEmail } from 'firebase/auth'
 import {auth} from "../../../firebase"
 

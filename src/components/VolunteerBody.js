@@ -1,7 +1,7 @@
 import { Alert, StyleSheet, Text, TouchableOpacity, View, Linking } from 'react-native';
 import React from 'react';
 import CustomText from './CustomText';
-import { colors } from '../constants/Colors';
+import { colors } from '../util/constants/Colors';
 import { Icon } from '@rneui/base';
 
 const VolunteerBody = (props) => {

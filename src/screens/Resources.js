@@ -1,7 +1,9 @@
 import { StyleSheet } from 'react-native'
-import React from 'react'
-import PageBody from "../constants/PageBody"
+import React, { useEffect } from 'react'
+import PageBody from "../util/constants/PageBody"
 const Resources = () => {
+
+
   return (
     <PageBody>
       

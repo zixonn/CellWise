@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput} from 'react-native'
 import React from 'react'
-import { colors } from '../constants/Colors'
-import { fontSizes } from '../constants/FontSizes'
+import { colors } from '../util/constants/Colors'
+import { fontSizes } from '../util/constants/FontSizes'
 
 const CustomInput = (props) => {
   return (
