@@ -1,8 +1,8 @@
-import React from 'react';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 import CustomText from '../../components/CustomText';
 import Header from '../../components/Header';
-
-const A1 = () => {
+const A10 = () => {
   return (
     <>
       <CustomText margin="7%" width="90%" fontFamily="Rubik-Regular" color="gray">
@@ -30,6 +30,8 @@ const A1 = () => {
       </CustomText>
     </>
   );
-};
+}
 
-export default A1;
+export default A10
+
+const styles = StyleSheet.create({})

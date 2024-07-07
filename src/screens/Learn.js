@@ -7,7 +7,7 @@ import { OverviewInfo ,SymptomsInfo ,TreatmentInfo ,DiagnosisInfo ,LivingInfo  }
 const Learn = () => {
 
   return (
-    <PageBody>
+    <PageBody white>
       <ScrollView style = {{width:"100%"}} contentContainerStyle = {{flexGrow:1, alignItems:"center"}}>
         <View style = {{marginBottom:"110%",width:"100%"}}>
           <ModulePreview source = {require("../assets/images/overview.png")} label = "Overview" style = {{marginTop:"5%"}} time = {"15 min"} bg = "bg1.png"

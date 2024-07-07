@@ -22,8 +22,8 @@ const TabNav = () => {
           gestureEnabled: false,
           headerStyle: {
             backgroundColor: colors.lochmara,
-            borderBottomRightRadius: 10,
-            borderBottomLeftRadius: 10,
+          //  borderBottomRightRadius: 10,
+          //  borderBottomLeftRadius: 10,
           },
           headerTitleStyle: {
             fontFamily: "Rubik-Medium",
@@ -76,7 +76,7 @@ const TabNav = () => {
           options={{
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center',width:"100%" }}>
-                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",left:"-85%"}} 
+                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",left:"-9%"}} 
                 onPress={() => {
                   Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
                     {
