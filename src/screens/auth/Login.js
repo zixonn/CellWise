@@ -20,7 +20,7 @@ const Login = () => {
     <PageBody white>
       <TouchableOpacity
        style = {{position:"absolute", top:'2%',left:"3%",justifyContent:"center",alignItems:"center"}}
-       activeOpacity={0.8} onPress={() => nav.navigate("TabNav")}
+       activeOpacity={0.8} onPress={() => nav.navigate('TabNav')}
        > 
         <Icon name = "guest" color = "black" size = {20} type = "zocial" />
         <CustomText margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
@@ -44,7 +44,7 @@ const Login = () => {
         marginTop={'6%'}
         title='Log in'
         onPress={() => logInUser(email, password,() => {
-          nav.navigate('TabNav', { screen: 'Learn' })
+          nav.navigate("TabNav")
           setEmail(''); setPassword('');
         })}
       />

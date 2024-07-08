@@ -1,4 +1,4 @@
- {
+{
   "expo": {
     "name": "CellWise",
     "slug": "CellWise",
@@ -18,7 +18,8 @@
       "adaptiveIcon": {
         "foregroundImage": "src/assets/images/logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.zixonn.CellWise"
     },
     "web": {
       "favicon": "src/assets/images/logo.png"
@@ -27,8 +28,12 @@
       [
         "expo-font",
         {
-          "fonts": ["src/assets/fonts/Rubik-Bold.ttf","src/assets/fonts/Rubik-Medium.ttf",
-                      "src/assets/fonts/Rubik-Regular.ttf","src/assets/fonts/Rubik-SemiBold.ttf"]
+          "fonts": [
+            "src/assets/fonts/Rubik-Bold.ttf",
+            "src/assets/fonts/Rubik-Medium.ttf",
+            "src/assets/fonts/Rubik-Regular.ttf",
+            "src/assets/fonts/Rubik-SemiBold.ttf"
+          ]
         }
       ]
     ]

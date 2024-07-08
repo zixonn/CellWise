@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import Learn from "../screens/Learn";
-import Resources from "../screens/Resources";
+import Glossary from "../screens/Glossary"
 import Volunteer from "../screens/Volunteer";
 import { colors } from "../util/constants/Colors";
 import { fontSizes } from "../util/constants/FontSizes";
@@ -10,6 +10,7 @@ import { Icon } from '@rneui/base';
 import { Alert, Text, View } from 'react-native';
 import { useUser } from '../context/UserContext';
 import { useNavigation } from '@react-navigation/native';
+
 const TabNav = () => {
   const Tabs = createBottomTabNavigator();
   const {logOutUser} = useUser()
@@ -41,10 +42,13 @@ const TabNav = () => {
 
             if (route.name === 'Learning Modules') {
               iconName = 'school';
-            } else if (route.name === 'Resources') {
+              theType = "ionicons"
+            } else if (route.name === 'Glossary') {
               iconName = 'book';
+              theType = "entypo"
             } else if (route.name === 'Organizations') {
               iconName = 'business';
+              theType = "alert"
             }
 
             return (
@@ -55,7 +59,7 @@ const TabNav = () => {
                 width:"100%",
                 padding: "3%",
               }}>
-                <Icon name={iconName} color={iconColor} size={25} />
+                <Icon name={iconName} type={theType} color={iconColor} size={25} />
                 <Text style={{
                   color: focused ? colors.white : colors.gray,
                   fontFamily: "Rubik-Medium",
@@ -76,7 +80,7 @@ const TabNav = () => {
           options={{
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center',width:"100%" }}>
-                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",left:"-9%"}} 
+                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",left:"-90%"}} 
                 onPress={() => {
                   Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
                     {
@@ -93,11 +97,12 @@ const TabNav = () => {
             ),
           }}
         />
-        <Tabs.Screen name="Resources" component={Resources} />
+        <Tabs.Screen name="Glossary" component={Glossary} />
         <Tabs.Screen name="Organizations" component={Volunteer} />
       </Tabs.Navigator>
     </>
   );
 };
+
 
 export default TabNav;
