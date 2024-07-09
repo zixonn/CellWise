@@ -1,32 +1,50 @@
 import React from 'react';
 import CustomText from '../../components/CustomText';
 import Header from '../../components/Header';
+import Source from '../../components/Source';
 
 export default A3 = () => {
   return (
     <>
       <CustomText margin="7%" width="90%" fontFamily="Rubik-Regular" color="gray">
-        <Header>Definition</Header>
-        Sickle Cell Disease (SCD) is a genetic blood disorder characterized by abnormal hemoglobin, the protein in red blood cells responsible for
-        transporting oxygen throughout the body. This condition primarily affects individuals of African, Mediterranean, Middle Eastern, and Indian 
-        descent. The mutation responsible for SCD causes red blood cells to become rigid and crescent-shaped under certain conditions, impairing 
-        their ability to flow smoothly through blood vessels. This abnormal shape leads to episodes of intense pain, known as pain crises, as well as
-        chronic anemia, fatigue, and damage to vital organs over time.
-        <Header newSection={true}>Origins</Header>
-        There are several types of SCD, depending on the specific genetic mutations inherited. The most common and severe form is sickle cell anemia
-        (HbSS), where individuals inherit two copies of the sickle hemoglobin gene. Other forms include HbSC disease and HbS beta thalassemia, which 
-        vary in terms of symptoms and severity but share the characteristic of abnormal hemoglobin affecting red blood cell function.
-        Managing SCD involves a comprehensive approach to alleviate symptoms, prevent complications, and improve quality of life. Treatment 
-        strategies often include pain management during crises, medications to reduce the risk of complications such as infections, and regular
-        blood transfusions to improve oxygen delivery and reduce organ damage. Hydroxyurea, a medication that increases fetal hemoglobin
-        production, has also shown effectiveness in reducing the frequency of pain crises in some patients.
-        <Header newSection={true}>Recent Breakthroughs</Header>
-        In recent years, advances in medical research have provided promising avenues for treatment and potential cures. Gene therapy and bone
-        marrow transplantation, which can replace defective stem cells with healthy ones, offer hope for a cure by addressing the genetic root 
-        of the disease. These treatments, however, come with challenges such as finding suitable donors and managing potential complications.
-        Overall, while Sickle Cell Disease presents significant challenges, ongoing research and advancements in medical care offer hope for 
-        improved outcomes and, ultimately, a cure. Increased awareness, early diagnosis, and access to comprehensive care remain essential in 
-        addressing the complexities of this inherited blood disorder and enhancing the lives of individuals living with SCD worldwide.
+        <Header>What is sickle cell trait?</Header>
+        Sickle cell trait occurs when a person carries one copy of the sickle cell gene passed down from one parent 
+        along with a normal hemoglobin gene from the other parent.
+        {'\n\n'}
+        In most cases, people living with sickle cell trait experience no symptoms and lead normal lives. Because 
+        some people with sickle cell trait have complications from the condition, scientists are working to better 
+        understand when and how sickle cell trait might affect a person’s health. Over 2 million people in the United 
+        States live with sickle cell trait.
+        {'\n\n'}
+        Sickle cell trait is different from sickle cell disease.
+        <Header newSection={true}>The difference between sickle cell trait and sickle cell disease</Header>
+        People with sickle cell trait have only one copy of the altered hemoglobin gene and usually do not have any 
+        symptoms related to the disease. In contrast, people with sickle cell disease have two copies of the altered
+        hemoglobin gene.
+        {'\n\n'}
+        With two copies of the altered gene, red blood cells break down quickly and lead to long-lasting, severe anemia, 
+        or low hemoglobin levels. Red blood cells lose their normal shape and form a “C” or sickle shape that gives the 
+        disease its name.
+        {'\n\n'}
+        Without treatment, a person with sickle cell disease can develop frequent bouts of pain and may have life-threatening
+        complications, including damage to organs such as brain, bones, lungs, kidneys, liver, and heart.
+        {'\n\n'}
+        The disease is most common in people of African, Middle Eastern, Mediterranean, Central and South American, and Asian 
+        Indian origin or descent.
+        <Header newSection={true}>What it means if someone has sickle cell trait</Header>
+        Most people who have sickle cell trait will never experience any medical complications. However, in rare instances, 
+        some people who have sickle cell trait can experience medical complications when performing intense physical activity. 
+        For these people, the risk of experiencing symptoms is higher when they are in situations where their body needs more 
+        oxygen than usual, for example, when they engage in high intensity physical activity or are active at higher elevations 
+        such as mountains or unpressurized airplanes. Persons with sickle cell trait occasionally experience damage to their kidneys 
+        from sickling in sections of the kidney.
+        {'\n\n'}
+        People with sickle cell trait should be aware of their condition because they can pass the gene onto their children. If both 
+        parents have sickle cell trait, there is a greater chance that one or more of their children will be born with sickle cell disease.
+        <Source>
+          Source: National Heart, Lung, and Blood Institute; National Institutes of Health; U.S. Department of 
+          Health and Human Services.
+        </Source>
       </CustomText>
     </>
   );

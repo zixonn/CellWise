@@ -1,32 +1,44 @@
 import React from 'react';
 import CustomText from '../../components/CustomText';
 import Header from '../../components/Header';
+import Source from "../../components/Source"
 
 export default A2 = () => {
   return (
     <>
       <CustomText margin="7%" width="90%" fontFamily="Rubik-Regular" color="gray">
-        <Header>Definition</Header>
-        Sickle Cell Disease (SCD) is a genetic blood disorder characterized by abnormal hemoglobin, the protein in red blood cells responsible for
-        transporting oxygen throughout the body. This condition primarily affects individuals of African, Mediterranean, Middle Eastern, and Indian 
-        descent. The mutation responsible for SCD causes red blood cells to become rigid and crescent-shaped under certain conditions, impairing 
-        their ability to flow smoothly through blood vessels. This abnormal shape leads to episodes of intense pain, known as pain crises, as well as
-        chronic anemia, fatigue, and damage to vital organs over time.
-        <Header newSection={true}>Origins</Header>
-        There are several types of SCD, depending on the specific genetic mutations inherited. The most common and severe form is sickle cell anemia
-        (HbSS), where individuals inherit two copies of the sickle hemoglobin gene. Other forms include HbSC disease and HbS beta thalassemia, which 
-        vary in terms of symptoms and severity but share the characteristic of abnormal hemoglobin affecting red blood cell function.
-        Managing SCD involves a comprehensive approach to alleviate symptoms, prevent complications, and improve quality of life. Treatment 
-        strategies often include pain management during crises, medications to reduce the risk of complications such as infections, and regular
-        blood transfusions to improve oxygen delivery and reduce organ damage. Hydroxyurea, a medication that increases fetal hemoglobin
-        production, has also shown effectiveness in reducing the frequency of pain crises in some patients.
-        <Header newSection={true}>Recent Breakthroughs</Header>
-        In recent years, advances in medical research have provided promising avenues for treatment and potential cures. Gene therapy and bone
-        marrow transplantation, which can replace defective stem cells with healthy ones, offer hope for a cure by addressing the genetic root 
-        of the disease. These treatments, however, come with challenges such as finding suitable donors and managing potential complications.
-        Overall, while Sickle Cell Disease presents significant challenges, ongoing research and advancements in medical care offer hope for 
-        improved outcomes and, ultimately, a cure. Increased awareness, early diagnosis, and access to comprehensive care remain essential in 
-        addressing the complexities of this inherited blood disorder and enhancing the lives of individuals living with SCD worldwide.
+        Sickle cell disease is inherited  , meaning that it runs in families. People who have sickle cell anemia inherit two 
+        faulty hemoglobin  genes — hemoglobin S — one from each parent. Sickle cell disease can also occur when a child inherits 
+        one hemoglobin S gene from one parent and another faulty hemoglobin gene, such as beta (β) thalassemia, hemoglobin C, hemoglobin
+        D, or hemoglobin E, from the second parent.
+        {'\n\n'}
+        A person has sickle cell trait when they inherit hemoglobin S gene from one parent and a normal hemoglobin gene — 
+        hemoglobin A — from the other. They are called a carrier of the hemoglobin S gene because they can pass it on when they have a child. 
+        People who have sickle cell trait are generally healthy.
+        <Header newSection={true}>Inheritance pattern for sickle cell disease</Header>
+        In the image above, each parent has one normal hemoglobin A gene and one hemoglobin S gene, which means each of their children has:
+        {'\n\n'}
+        ● A 25%, or 1 in 4, chance of inheriting two normal hemoglobin A genes. This child does not have sickle cell trait or disease.
+        {'\n'}
+        ● A 50%, or 1 in 2, chance of inheriting one normal hemoglobin A gene and one hemoglobin S gene. This child has sickle cell trait.
+        {'\n'}
+        ● A 25%, or 1 in 4, chance of inheriting two hemoglobin S genes. This child has sickle cell disease.
+        {'\n\n'}
+        It is important to keep in mind that each time this couple has a child, the chances of that child having sickle cell disease remain the same. 
+        In other words, if the first child has sickle cell disease, there is still a 25% chance that the second child will also have the disease. Both boys 
+        and girls can inherit sickle cell trait, sickle cell disease, or normal hemoglobin.
+        {'\n\n'}
+        If a person wants to know whether they carry a sickle hemoglobin gene, a healthcare provider can order a blood test to find out.
+        <Header newSection={true}>What should you do if you are a carrier or have the disease?</Header>
+        People who do not know whether they carry a faulty hemoglobin gene can ask their provider for a blood test.
+        {'\n\n'}
+        Couples who are planning to have children and know that they are at risk of having a child with sickle cell
+        disease may want to meet with a genetic counselor. A genetic counselor can answer questions about the risk 
+        and explain the choices that are available.
+        <Source>
+          Source: National Heart, Lung, and Blood Institute; National Institutes of Health; U.S. Department of 
+          Health and Human Services.
+        </Source>
       </CustomText>
     </>
   );

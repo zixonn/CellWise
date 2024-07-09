@@ -14,7 +14,7 @@ const Glossary = () => {
   )
 
   return (
-    <PageBody>
+    <PageBody white>
       <View style={{ flex: 1, width: '100%' }}>
         <View style={{ justifyContent: 'center', alignItems: 'center', paddingVertical: '6%' }}>
           <CustomText color="gray" fontFamily={"Rubik-SemiBold"} fontSize={"small"} textAlign={"left"} width="80%">Search Glossary</CustomText>

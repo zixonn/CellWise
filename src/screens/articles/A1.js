@@ -1,33 +1,43 @@
 import React from 'react';
 import CustomText from '../../components/CustomText';
 import Header from '../../components/Header';
+import Source from '../../components/Source';
 
 const A1 = () => {
   return (
     <>
-      <CustomText margin="7%" width="90%" fontFamily="Rubik-Regular" color="gray">
-        <Header>Definition</Header>
-        Sickle Cell Disease (SCD) is a genetic blood disorder characterized by abnormal hemoglobin, the protein in red blood cells responsible for
-        transporting oxygen throughout the body. This condition primarily affects individuals of African, Mediterranean, Middle Eastern, and Indian 
-        descent. The mutation responsible for SCD causes red blood cells to become rigid and crescent-shaped under certain conditions, impairing 
-        their ability to flow smoothly through blood vessels. This abnormal shape leads to episodes of intense pain, known as pain crises, as well as
-        chronic anemia, fatigue, and damage to vital organs over time.
-        <Header newSection={true}>Origins</Header>
-        There are several types of SCD, depending on the specific genetic mutations inherited. The most common and severe form is sickle cell anemia
-        (HbSS), where individuals inherit two copies of the sickle hemoglobin gene. Other forms include HbSC disease and HbS beta thalassemia, which 
-        vary in terms of symptoms and severity but share the characteristic of abnormal hemoglobin affecting red blood cell function.
-        Managing SCD involves a comprehensive approach to alleviate symptoms, prevent complications, and improve quality of life. Treatment 
-        strategies often include pain management during crises, medications to reduce the risk of complications such as infections, and regular
-        blood transfusions to improve oxygen delivery and reduce organ damage. Hydroxyurea, a medication that increases fetal hemoglobin
-        production, has also shown effectiveness in reducing the frequency of pain crises in some patients.
-        <Header newSection={true}>Recent Breakthroughs</Header>
-        In recent years, advances in medical research have provided promising avenues for treatment and potential cures. Gene therapy and bone
-        marrow transplantation, which can replace defective stem cells with healthy ones, offer hope for a cure by addressing the genetic root 
-        of the disease. These treatments, however, come with challenges such as finding suitable donors and managing potential complications.
-        Overall, while Sickle Cell Disease presents significant challenges, ongoing research and advancements in medical care offer hope for 
-        improved outcomes and, ultimately, a cure. Increased awareness, early diagnosis, and access to comprehensive care remain essential in 
-        addressing the complexities of this inherited blood disorder and enhancing the lives of individuals living with SCD worldwide.
+      <CustomText margin="7%" width="92%" fontFamily="Rubik-Regular" color="gray">
+        Sickle cell disease is a group of inherited red blood cell disorders that affect hemoglobin, the protein 
+        that carries oxygen through the body. Normally, red blood cells are disc-shaped and flexible enough to move
+        easily through the blood vessels. In sickle cell disease, red blood cells become crescent- or “sickle”-shaped 
+        due to a genetic mutation. These sickled red blood cells do not bend or move easily and can block blood flow
+        to the rest of the body.
+        {'\n\n'}
+        The blocked blood flow through the body can lead to serious problems, including stroke,
+        eye problems, infections, and episodes of pain called pain crises.
+        {'\n\n'}
+        Sickle cell disease is a lifelong illness. Until recently, a bone marrow transplant was the only cure for sickle 
+        cell disease. However, in December 2023, the U.S. Food and Drug Administration approved two new therapies to treat 
+        the disease. One approach adds a gene to the body and the other makes changes to a gene that is already in the body. 
+        NHLBI researchers are continuing to explore treatments that impact genes, but there are other types of treatments that
+        can reduce symptoms and prolong life. If you have sickle cell disease, your healthcare team will work with you on a 
+        treatment plan to reduce your symptoms and manage the condition. 
+        {'\n\n'}
+        The condition affects more than 100,000 people in the United States and 20 million people worldwide. In the United States,
+        most people who have sickle cell disease are of African ancestry or identify themselves as Black:
+        {'\n\n'}
+        ● About 1 in 13 Black or African American babies are born with sickle cell trait.
+        {'\n'}
+        ● About 1 in every 365 Black or African American babies are born with sickle cell disease.
+        {'\n\n'}
+        Many people who come from Hispanic, Southern European, Middle Eastern, or Asian Indian backgrounds also have sickle cell disease.
+        {'\n\n'}
+        The NHLBI leads and supports research and clinical trials to find a cure for sickle cell disease.
+        <Source>
+          Source: National Heart, Lung, and Blood Institute; National Institutes of Health; U.S. Department of Health and Human Services.
+        </Source>
       </CustomText>
+      
     </>
   );
 };

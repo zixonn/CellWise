@@ -2,31 +2,24 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import CustomText from '../../components/CustomText';
 import Header from '../../components/Header';
+import Source from '../../components/Source';
+
 const A10 = () => {
   return (
     <>
       <CustomText margin="7%" width="90%" fontFamily="Rubik-Regular" color="gray">
-        <Header>Definition</Header>
-        Sickle Cell Disease (SCD) is a genetic blood disorder characterized by abnormal hemoglobin, the protein in red blood cells responsible for
-        transporting oxygen throughout the body. This condition primarily affects individuals of African, Mediterranean, Middle Eastern, and Indian 
-        descent. The mutation responsible for SCD causes red blood cells to become rigid and crescent-shaped under certain conditions, impairing 
-        their ability to flow smoothly through blood vessels. This abnormal shape leads to episodes of intense pain, known as pain crises, as well as
-        chronic anemia, fatigue, and damage to vital organs over time.
-        <Header newSection={true}>Origins</Header>
-        There are several types of SCD, depending on the specific genetic mutations inherited. The most common and severe form is sickle cell anemia
-        (HbSS), where individuals inherit two copies of the sickle hemoglobin gene. Other forms include HbSC disease and HbS beta thalassemia, which 
-        vary in terms of symptoms and severity but share the characteristic of abnormal hemoglobin affecting red blood cell function.
-        Managing SCD involves a comprehensive approach to alleviate symptoms, prevent complications, and improve quality of life. Treatment 
-        strategies often include pain management during crises, medications to reduce the risk of complications such as infections, and regular
-        blood transfusions to improve oxygen delivery and reduce organ damage. Hydroxyurea, a medication that increases fetal hemoglobin
-        production, has also shown effectiveness in reducing the frequency of pain crises in some patients.
-        <Header newSection={true}>Recent Breakthroughs</Header>
-        In recent years, advances in medical research have provided promising avenues for treatment and potential cures. Gene therapy and bone
-        marrow transplantation, which can replace defective stem cells with healthy ones, offer hope for a cure by addressing the genetic root 
-        of the disease. These treatments, however, come with challenges such as finding suitable donors and managing potential complications.
-        Overall, while Sickle Cell Disease presents significant challenges, ongoing research and advancements in medical care offer hope for 
-        improved outcomes and, ultimately, a cure. Increased awareness, early diagnosis, and access to comprehensive care remain essential in 
-        addressing the complexities of this inherited blood disorder and enhancing the lives of individuals living with SCD worldwide.
+      Sickle cell disease can affect sexual organs in ways that affect quality of life and reproduction. Menstrual cycles can sometimes exacerbate symptoms of sickle cell disease. You may need hormones or contraceptive options, but some options are safer than others. You should review them carefully with your physician.
+      {'\n\n'}
+      Women with sickle cell disease are at higher risk of problems during pregnancy. If you are pregnant or planning for pregnancy, find a team of healthcare providers who specialize in high-risk pregnancies and have experience with patients who have sickle cell disease. Meet with the team throughout your pregnancy to manage the risks.
+      {'\n\n'}
+      Your provider may prescribe certain vitamins and will be careful to prescribe pain medicines that are safe for you and your baby. You should not use hydroxyurea during pregnancy.
+      {'\n\n'}
+      You may need to have one or more blood transfusions during pregnancy to treat problems, such as anemia symptoms that get worse. You may also experience more pain crises or be at higher risk of having acute chest syndrome. Your provider will talk to you about how to help prevent these complications.
+      {'\n\n'}
+      Men with sickle cell disease are more likely to experience priapism, an erection lasting at least 4 hours. This can cause psychological distress and sexual dysfunction. It requires medical attention from a specialized healthcare provider called a urologist.
+      <Source>
+      Source: National Heart, Lung, and Blood Institute; National Institutes of Health; U.S. Department of Health and Human Services.
+      </Source>
       </CustomText>
     </>
   );

@@ -17,38 +17,32 @@ const findArticle = (articleTitle) => {
         case "What Is Sickle Cell Disease?":
             articleBody = A1; 
             break;
-        case "Causes of Sickle Cell":
+        case "Causes and Risk Factors":
             articleBody = A2; 
             break;
-        case "Effects On the Body":
+        case "Sickle Cell Trait":
             articleBody = A3; 
             break;
-        case "Common Symptoms":
+        case "Symptoms":
             articleBody = A4; 
             break;
-        case "How They Manifest":
+        case "How Sickle Cell Disease May Affect Your Health":
             articleBody = A5; 
             break;
-        case "Diagnostic Tests":
+        case "Diagnosis":
             articleBody = A6; 
             break;
-        case "Common Procedures":
+        case "Medicines":
             articleBody = A7; 
             break;
-        case "Medications":
-            articleBody = A8; 
-            break;
         case "Therapies":
+                articleBody = A8; 
+                break;
+        case "Living With Sickle Cell Disease":
                 articleBody = A9; 
                 break;
-        case "Lifestyle Changes":
+        case "Pregnancy, Reproduction, and Sickle Cell Disease":
                 articleBody = A10; 
-                break;
-        case "Tips and Advice":
-                articleBody = A11; 
-                break;
-        case "Athletes":
-                articleBody = A12; 
                 break;
         default:
             articleBody = () => null; 

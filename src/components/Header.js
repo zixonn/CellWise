@@ -4,7 +4,7 @@ import CustomText from './CustomText'
 export default function Header({children, term, newSection}) {
   return (
     ( newSection ==  true )
-     ?  <CustomText fontFamily={"Rubik-Medium"} color = {"black"} fontSize={"small"}>{"\n"}{"\n"}{children}{"\n"}</CustomText> 
-     :  <CustomText fontFamily={"Rubik-Medium"} color = {"black"}  fontSize={"small"}>{children}{"\n"}</CustomText>
+     ?  <CustomText width={'90%'} fontFamily={"Rubik-Medium"} color = {"black"}>{"\n"}{"\n"}{children}{"\n"}</CustomText> 
+     :  <CustomText width={'90%'} fontFamily={"Rubik-Medium"} color = {"black"}>{children}{"\n"}</CustomText>
   )
 }

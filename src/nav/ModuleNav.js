@@ -14,9 +14,9 @@ const ModuleNav = () => {
         <StatusBar style='light' />
         <Stack.Navigator screenOptions={{
           gestureEnabled:false,
-          headerStyle:{backgroundColor:colors.lochmara,borderBottomRightRadius:10,borderBottomLeftRadius:10},
+          headerStyle:{backgroundColor:colors.lochmara},
           headerTitleStyle:{fontFamily:"Rubik-Medium",color:colors.white,fontSize:fontSizes.small,alignSelf:"center"},
-          headerBackTitleVisible:false,headerBackImage: () => <Icon name = "arrow-back" color={colors.white} style={{marginLeft:"15%"}}/>
+          headerBackTitleVisible:false,headerBackImage: () => <Icon name = "arrow-back" color={colors.white} style={{marginLeft:"10%"}}/>
           }}>
           <Stack.Screen name = "Articles" component={ArticleList}/>
           <Stack.Screen name = "Article" component={Article} options={({ route }) => ({

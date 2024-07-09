@@ -1,39 +1,32 @@
 
 const OverviewInfo = {
-    amount:3,
     titles:[
         "What Is Sickle Cell Disease?",
-        "Causes of Sickle Cell",
-        "Effects On the Body"
+        "Causes and Risk Factors",
+        "Sickle Cell Trait",
     ]
 }
 const SymptomsInfo  = {
-    amount:2,
     titles:[
-        "Common Symptoms",
-        "How They Manifest"
+        "Symptoms",
+        "How Sickle Cell Disease May Affect Your Health",
     ]
 }
 const DiagnosisInfo  = {
-    amount:2,
     titles:[
-        "Diagnostic Tests",
-        "Common Procedures"
+        "Diagnosis",
     ]
 }
 const TreatmentInfo  = {
-    amount:3,
     titles:[
-        "Medications",
+        "Medicines",
         "Therapies",
-        "Lifestyle Changes"
     ]
 }
 const LivingInfo  = {
-    amount:2,
     titles:[
-        "Tips and Advice",
-        "Athletes"
+        "Living With Sickle Cell Disease",
+        "Pregnancy, Reproduction, and Sickle Cell Disease",
     ]
 }
 
