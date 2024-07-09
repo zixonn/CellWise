@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import Learn from "../screens/Learn";
 import Glossary from "../screens/Glossary"
-import Volunteer from "../screens/Volunteer";
+import SymptomTracker  from "../screens/SymptomTracker";
 import { colors } from "../util/constants/Colors";
 import { fontSizes } from "../util/constants/FontSizes";
 import { StatusBar } from 'expo-status-bar';
@@ -23,8 +23,6 @@ const TabNav = () => {
           gestureEnabled: false,
           headerStyle: {
             backgroundColor: colors.lochmara,
-          //  borderBottomRightRadius: 10,
-          //  borderBottomLeftRadius: 10,
           },
           headerTitleStyle: {
             fontFamily: "Rubik-Medium",
@@ -46,8 +44,8 @@ const TabNav = () => {
             } else if (route.name === 'Glossary') {
               iconName = 'book';
               theType = "entypo"
-            } else if (route.name === 'Organizations') {
-              iconName = 'business';
+            } else if (route.name === 'Symptom Tracker') {
+              iconName = 'health-and-safety';
               theType = "alert"
             }
 
@@ -57,14 +55,14 @@ const TabNav = () => {
                 justifyContent: 'center',
                 backgroundColor: focused ? colors.gray : 'transparent',
                 width:"100%",
-                padding: "3%",
+                padding: "4%",
               }}>
                 <Icon name={iconName} type={theType} color={iconColor} size={25} />
                 <Text style={{
                   color: focused ? colors.white : colors.gray,
                   fontFamily: "Rubik-Medium",
-                  marginTop: "3%",
-                  fontSize: 11,
+                  marginVertical: "1%",
+                  fontSize: 10,
                 }}>
                   {route.name}
                 </Text>
@@ -98,7 +96,7 @@ const TabNav = () => {
           }}
         />
         <Tabs.Screen name="Glossary" component={Glossary} />
-        <Tabs.Screen name="Organizations" component={Volunteer} />
+        <Tabs.Screen name="Symptom Tracker" component={SymptomTracker } />
       </Tabs.Navigator>
     </>
   );

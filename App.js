@@ -8,33 +8,8 @@ import { View } from 'react-native';
 import ModuleNav from './src/nav/ModuleNav';
 import TabNav from './src/nav/TabNav';
 import { UserProvider } from './src/context/UserContext';
-import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-
 
 const Stack = createStackNavigator();
-
-const EXPO_PUBLIC_BASE_URL = process.env.EXPO_PUBLIC_BASE_URL;
-const EXPO_PUBLIC_API_KEY = process.env.EXPO_PUBLIC_API_KEY;
-
-const httpLink = createHttpLink({
-  uri: EXPO_PUBLIC_BASE_URL,
-});
-
-const authLink = setContext((_, { headers }) => {
-  const token = EXPO_PUBLIC_API_KEY;
-  return {
-    headers: {
-      ...headers,
-      'Stellate-Api-Token': token ? `${token}` : '',
-    },
-  };
-});
-
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -55,7 +30,6 @@ export default function App() {
   }
 
   return (
-    <ApolloProvider client={client}>
       <UserProvider>
         <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
           <NavigationContainer>
@@ -67,6 +41,5 @@ export default function App() {
           </NavigationContainer>
         </View>
       </UserProvider>
-    </ApolloProvider>
   );
 }
