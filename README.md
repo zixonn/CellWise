@@ -1,6 +1,6 @@
 
 # CellWise
-A mobile application to educate people about Sickle Cell and connect them to local organizations.
+A mobile application to educate people about Sickle Cell and help track their symptoms.
 
 ## Project Status
 In Progress
