@@ -11,6 +11,7 @@ import { Alert, Text, View } from 'react-native';
 import { useUser } from '../context/UserContext';
 import { useNavigation } from '@react-navigation/native';
 
+
 const TabNav = () => {
   const Tabs = createBottomTabNavigator();
   const {logOutUser} = useUser()
