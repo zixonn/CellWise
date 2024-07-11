@@ -10,7 +10,7 @@ const LongButton = (props) => {
     disabled = {props.disabled}
     title={props.title}
     titleStyle = {{color:colors.white, fontFamily:"Rubik-SemiBold",fontSize:fontSizes.medium}}
-    containerStyle = {{borderRadius:10, width:"75%",margin:props.margin, marginTop:props.marginTop, marginBottom:props.marginBottom}}
+    containerStyle = {{borderRadius:10, width:"75%",margin:props.margin, marginTop:props.marginTop, marginBottom:props.marginBottom,marginVertical:props.marginVertical}}
     buttonStyle = {{padding:"6%"}}
     color = {colors.lochmara}
     onPress={props.onPress}

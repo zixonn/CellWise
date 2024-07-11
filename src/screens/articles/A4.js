@@ -30,7 +30,7 @@ const A4 = () => {
         ● Acute chest syndrome: Symptoms include chest pain, coughing, fever, and shortness of breath. You will need to be admitted to the hospital, where you may receive 
         antibiotics, oxygen therapy, or a blood transfusion.
         {'\n'}
-        ●  Stroke: Warning signs include sudden weakness, numbness on one side of the body, confusion, trouble speaking, seeing, or walking.
+        ● Stroke: Warning signs include sudden weakness, numbness on one side of the body, confusion, trouble speaking, seeing, or walking.
         {'\n'}
         ● Priapism: An erection that lasts for 4 hours or more. You will need to go to the hospital to see a hematologist (a doctor who specializes in blood conditions 
         and diseases) and a urologist (a doctor who specializes in treating conditions of the male reproductive and urinary systems).

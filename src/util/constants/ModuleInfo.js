@@ -9,7 +9,7 @@ const OverviewInfo = {
 const SymptomsInfo  = {
     titles:[
         "Symptoms",
-        "How Sickle Cell Disease May Affect Your Health",
+        "How Sickle Cell Disease May Affect Health",
     ]
 }
 const DiagnosisInfo  = {
@@ -26,7 +26,7 @@ const TreatmentInfo  = {
 const LivingInfo  = {
     titles:[
         "Living With Sickle Cell Disease",
-        "Pregnancy, Reproduction, and Sickle Cell Disease",
+        "Pregnancy and Reproduction",
     ]
 }
 

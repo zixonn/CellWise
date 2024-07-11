@@ -16,7 +16,8 @@ const ModuleNav = () => {
           gestureEnabled:false,
           headerStyle:{backgroundColor:colors.lochmara},
           headerTitleStyle:{fontFamily:"Rubik-Medium",color:colors.white,fontSize:fontSizes.small,alignSelf:"center"},
-          headerBackTitleVisible:false,headerBackImage: () => <Icon name = "arrow-back" color={colors.white} style={{marginLeft:"10%"}}/>
+          headerBackTitle:" ",
+          headerBackTitleVisible:false,headerBackImage: () => <Icon name = "arrow-back" color={colors.white} style={{margin:'15%'}}/>
           }}>
           <Stack.Screen name = "Articles" component={ArticleList}/>
           <Stack.Screen name = "Article" component={Article} options={({ route }) => ({

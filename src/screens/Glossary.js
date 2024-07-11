@@ -1,18 +1,16 @@
-import { StyleSheet, View, FlatList, ScrollView, VirtualizedList } from 'react-native'
+import { StyleSheet, View, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import PageBody from '../util/constants/PageBody'
+import glossaryWords from '../util/constants/glossaryWords'
 import CustomText from "../components/CustomText"
 import CustomInput from "../components/CustomInput"
 import Word from '../components/Word'
-import glossaryWords from '../util/constants/glossaryWords'
 
 const Glossary = () => {
   const [search, setSearch] = useState('')
-
   const filteredWords = glossaryWords.filter(item => 
     item.word.toLowerCase().startsWith(search.toLowerCase())
   )
-
   return (
     <PageBody white>
       <View style={{ flex: 1, width: '100%' }}>
@@ -23,7 +21,7 @@ const Glossary = () => {
             onChangeText={text => setSearch(text)}
             placeholder="Enter Word"
             maxLength={50}
-            padding="4%"
+            padding="3.5%"
             width="80%"
           />
         </View>
@@ -41,6 +39,4 @@ const Glossary = () => {
 }
 
 export default Glossary
-
-const styles = StyleSheet.create({})
 

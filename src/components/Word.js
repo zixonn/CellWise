@@ -7,7 +7,7 @@ const Word = (props) => {
   return (
     <View style = {styles.con}>
         <View style = {styles.topHalf}>
-            <CustomText color={"white"} fontFamily={"Rubik-SemiBold"} fontSize={"small"}>{props.term}</CustomText>
+            <CustomText color={"white"} fontFamily={"Rubik-Medium"} fontSize={"small"}>{props.term}</CustomText>
         </View>
         <CustomText margin={"3%"} color={"gray"} fontFamily={"Rubik-Regular"}>
             {props.def}

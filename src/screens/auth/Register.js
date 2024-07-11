@@ -54,17 +54,11 @@ const Register = () => {
         title='Register'
         onPress={handleRegister}
       />
-      <Divider width={1} color={colors.lightGray} style={{ width: '85%' }} />
-      <View style={{ flexDirection: 'row', gap: '20%', marginTop: '5%', marginBottom: '5%' }}>
-        <AuthOption name='google' />
-        <AuthOption name='facebook-square' />
-        <AuthOption name='apple1' />
-      </View>
-      <CustomText fontFamily={'Rubik-Medium'} color={'lightGray'}>
+      <CustomText fontFamily={'Rubik-Medium'} color={'lightGray'} marginBottom={"10%"}>
         Already have an account?
         <CustomText fontFamily={'Rubik-Medium'} color={'tangerine'} onPress={() => navigation.goBack()}>
           {' '}
-          Log in
+          ⠀Log in
         </CustomText>
       </CustomText>
     </PageBody>

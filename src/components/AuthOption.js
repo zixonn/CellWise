@@ -2,12 +2,15 @@ import { StyleSheet, View } from 'react-native'
 import React from 'react'
 import { Icon } from '@rneui/base'
 import { colors } from '../util/constants/Colors'
+import { TouchableOpacity } from 'react-native'
+import { useUser } from '../context/UserContext'
 
 const AuthOption = (props) => {
+
   return (
-    <View style = {styles.con}>
-     <Icon name = {props.name} type='antdesign' size={30} color={colors.tangerine}/>
-    </View>
+    <TouchableOpacity style = {styles.con}>
+      <Icon onPress={() => signInWithGoogle()} name = {props.name} type='antdesign' size={30} color={colors.tangerine}/>
+    </TouchableOpacity>
   )
 }
 

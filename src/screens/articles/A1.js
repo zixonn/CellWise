@@ -1,12 +1,11 @@
 import React from 'react';
 import CustomText from '../../components/CustomText';
-import Header from '../../components/Header';
 import Source from '../../components/Source';
 
 const A1 = () => {
   return (
     <>
-      <CustomText margin="7%" width="92%" fontFamily="Rubik-Regular" color="gray">
+      <CustomText marginTop="7%" width="90%" fontFamily="Rubik-Regular" color="gray">
         Sickle cell disease is a group of inherited red blood cell disorders that affect hemoglobin, the protein 
         that carries oxygen through the body. Normally, red blood cells are disc-shaped and flexible enough to move
         easily through the blood vessels. In sickle cell disease, red blood cells become crescent- or “sickle”-shaped 
@@ -27,7 +26,7 @@ const A1 = () => {
         most people who have sickle cell disease are of African ancestry or identify themselves as Black:
         {'\n\n'}
         ● About 1 in 13 Black or African American babies are born with sickle cell trait.
-        {'\n'}
+        {'\n'} 
         ● About 1 in every 365 Black or African American babies are born with sickle cell disease.
         {'\n\n'}
         Many people who come from Hispanic, Southern European, Middle Eastern, or Asian Indian backgrounds also have sickle cell disease.
@@ -37,7 +36,6 @@ const A1 = () => {
           Source: National Heart, Lung, and Blood Institute; National Institutes of Health; U.S. Department of Health and Human Services.
         </Source>
       </CustomText>
-      
     </>
   );
 };

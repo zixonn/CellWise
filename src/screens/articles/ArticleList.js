@@ -18,7 +18,7 @@ const ArticleList = ({ route }) => {
             <TouchableOpacity
              onPress={() => navigation.navigate("Article",{articleTitle:title})}
              style = {{padding:"3%", alignSelf:"flex-start",borderTopWidth:1,width:"100%",borderColor:colors.lightGray}}>
-              <CustomText alignSelf={"flex-start"} color = {"gray"} fontFamily={"Rubik-Regular"}key={title}>
+              <CustomText alignSelf={"flex-start"} color = {"gray"} fontFamily={"Rubik-Regular"}key={index}>
                 {title}
               </CustomText>
             </TouchableOpacity>

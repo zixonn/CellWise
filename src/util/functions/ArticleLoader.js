@@ -8,8 +8,6 @@ import A7 from "../../screens/articles/A7";
 import A8 from "../../screens/articles/A8";
 import A9 from "../../screens/articles/A9"
 import A10 from "../../screens/articles/A10";
-import A11 from "../../screens/articles/A11";
-import A12 from "../../screens/articles/A12"
 
 const findArticle = (articleTitle) => {
     let articleBody;
@@ -26,7 +24,7 @@ const findArticle = (articleTitle) => {
         case "Symptoms":
             articleBody = A4; 
             break;
-        case "How Sickle Cell Disease May Affect Your Health":
+        case "How Sickle Cell Disease May Affect Health":
             articleBody = A5; 
             break;
         case "Diagnosis":
@@ -41,7 +39,7 @@ const findArticle = (articleTitle) => {
         case "Living With Sickle Cell Disease":
                 articleBody = A9; 
                 break;
-        case "Pregnancy, Reproduction, and Sickle Cell Disease":
+        case "Pregnancy and Reproduction":
                 articleBody = A10; 
                 break;
         default:
