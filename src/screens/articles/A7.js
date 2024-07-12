@@ -19,18 +19,21 @@ const A7 = () => {
         showed that hydroxyurea lowered the number of episodes of pain crises and acute chest syndrome. It also improved 
         anemia and reduced the need for transfusions and hospital admissions.
         {'\n'}
+        <View style = {{marginVertical:"2%"}}/>
         ● Use in children: Studies in children with severe hemoglobin SS or Sβ thalassemia showed that hydroxyurea lowered 
         the number of vaso-occlusive crises and hospitalizations. A study of children between the ages of 9 and 18 months 
         who had hemoglobin SS or Sβ thalassemia also showed that hydroxyurea lowered the number of pain episodes and the 
         incidence of dactylitis (painful swelling of the hands and feet). There is no information about how safe or effective 
         hydroxyurea is in children under 9 months old.
         {'\n'}
+        <View style = {{marginVertical:"2%"}}/>
         ● Pregnancy: Pregnant women should not use hydroxyurea.
         Since hydroxyurea can decrease several complications of sickle cell disease, most experts recommend daily use from 9 
         months of age and older with hemoglobin SS or Sβ(0) thalassemia to reduce the risk of painful episodes, recurrent chest 
         crises, or severe anemia. In some instances, regular use of hydroxyurea may be used as an alternative to transfusions 
         to prevent stroke in children. Whether hydroxyurea can prevent stroke in adults — or its ideal dose — is still unknown.
         {'\n\n'}
+        <View style = {{marginVertical:"2%"}}/>
         Possible side effects include a lowered white blood cell count or platelet count. Rarely, hydroxyurea can worsen anemia. 
         These side effects usually go away quickly if a patient stops taking the medicine. When the patient restarts it, the 
         healthcare provider usually prescribes a lower dose.

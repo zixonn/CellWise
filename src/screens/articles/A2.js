@@ -2,7 +2,7 @@ import React from 'react';
 import CustomText from '../../components/CustomText';
 import Header from '../../components/Header';
 import Source from "../../components/Source"
-
+import { View } from 'react-native';
 export default A2 = () => {
   return (
     <>
@@ -20,8 +20,10 @@ export default A2 = () => {
         {'\n\n'}
         ● A 25%, or 1 in 4, chance of inheriting two normal hemoglobin A genes. This child does not have sickle cell trait or disease.
         {'\n'}
+        <View style = {{marginVertical:"2%"}}/>
         ● A 50%, or 1 in 2, chance of inheriting one normal hemoglobin A gene and one hemoglobin S gene. This child has sickle cell trait.
         {'\n'}
+        <View style = {{marginVertical:"2%"}}/>
         ● A 25%, or 1 in 4, chance of inheriting two hemoglobin S genes. This child has sickle cell disease.
         {'\n\n'}
         It is important to keep in mind that each time this couple has a child, the chances of that child having sickle cell disease remain the same. 

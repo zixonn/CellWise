@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Divider } from '@rneui/base';
 import LongButton from '../../components/LongButton';
 import CustomInput from '../../components/CustomInput';
 import PageBody from '../../util/constants/PageBody';
 import CustomText from '../../components/CustomText';
-import AuthOption from '../../components/AuthOption';
-import { colors } from '../../util/constants/Colors';
 import { useUser } from '../../context/UserContext';
 
 const Register = () => {

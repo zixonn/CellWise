@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomText from '../../components/CustomText';
 import Source from '../../components/Source';
+import { View } from 'react-native';
 
 const A1 = () => {
   return (
@@ -27,6 +28,7 @@ const A1 = () => {
         {'\n\n'}
         ● About 1 in 13 Black or African American babies are born with sickle cell trait.
         {'\n'} 
+        <View style = {{marginVertical:"2%"}}/>
         ● About 1 in every 365 Black or African American babies are born with sickle cell disease.
         {'\n\n'}
         Many people who come from Hispanic, Southern European, Middle Eastern, or Asian Indian backgrounds also have sickle cell disease.

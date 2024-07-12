@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet,View } from 'react-native'
 import React from 'react'
 import CustomText from '../../components/CustomText';
 import Header from '../../components/Header';
@@ -16,9 +16,11 @@ const A8 = () => {
         ● Acute transfusions treat complications that cause severe anemia. Providers may also use transfusions when a patient has an acute stroke, 
         in many cases of acute chest crises, and in multi-organ failure. 
         {"\n"}
+        <View style = {{marginVertical:"2%"}}/>
         ● Intermittent transfusions may be recommended to help relieve other symptoms as needed. A patient who has sickle cell disease usually 
         receives blood transfusions before surgery to prevent complications.
         {"\n"}
+        <View style = {{marginVertical:"2%"}}/>
         ● Regular or ongoing blood transfusions may help lower the chances of another stroke in people who have had an acute stroke.
         {'\n\n'}
         Healthcare providers also recommend blood transfusions for children who have abnormal transcranial Doppler ultrasound results because transfusions can 
