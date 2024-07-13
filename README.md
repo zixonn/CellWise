@@ -17,8 +17,6 @@ A mobile application to educate people about sickle cell and help track their sy
 
 ## Installation and Setup Instructions
 
-#### Example:  
-
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
 Installation:
