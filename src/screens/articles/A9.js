@@ -3,6 +3,7 @@ import React from 'react'
 import CustomText from '../../components/CustomText';
 import Header from '../../components/Header';
 import Source from '../../components/Source';
+import * as Linking from "expo-linking"
 
 const A9 = () => {
   return (
@@ -13,10 +14,12 @@ const A9 = () => {
         ● See your healthcare provider regularly. Most people who have sickle cell disease should see their provider every 3 to 12 months, depending on their age and type of sickle cell.
         {'\n'}
         <View style = {{marginVertical:"2%"}}/>
-        ● Get regular vaccines, including a flu shot every year, and the COVID-19 vaccine. There are also routine immunizations to cover the higher risks of sickle cell disease, such as pneumonia and meningococcal vaccines. Follow these guidelinesexternal link even if you or your child is still taking penicillin.
+        ● Get regular vaccines, including a flu shot every year, and the COVID-19 vaccine. There are also routine immunizations to cover the higher risks of sickle cell disease, such as pneumonia and meningococcal vaccines.
+         <CustomText color={"lochmara"} onPress={() => Linking.openURL("https://www.cdc.gov/vaccines/schedules/index.html")}> Follow these guidelines</CustomText> even if you or your child is still taking penicillin.
         {'\n'}
         <View style = {{marginVertical:"2%"}}/>
-        ● Take hydroxyurea and other medicines recommended by your healthcare provider on a regular basis as prescribed. Although pregnant individuals should not take hydroxyurea, follow the ongoing medication advice from your healthcare provider for improved quality of life.
+        ● Take hydroxyurea and other medicines recommended by your healthcare provider on a regular basis as prescribed. Although pregnant individuals should not take hydroxyurea, follow the ongoing medication advice f
+        rom your healthcare provider for improved quality of life.
         {'\n'}
         <View style = {{marginVertical:"2%"}}/>
         ● Ask your healthcare team to check your blood pressure at each visit, and ask what your numbers mean for you — and how to control your blood pressure if it’s consistently higher than 130/80 mm Hg.
@@ -24,10 +27,12 @@ const A9 = () => {
         ● Establish a pain action plan with your healthcare provider ahead of time.
         {'\n'}
         <View style = {{marginVertical:"2%"}}/>
-        ● When an acute crisis is just starting, drink lots of fluids and take a nonsteroidal anti-inflammatory drug (NSAID), such as ibuprofen. If you have kidney problems, acetaminophen is often preferred. Also apply heat to the area with a heating pad or compress.
+        ● When an acute crisis is just starting, drink lots of fluids and take a nonsteroidal anti-inflammatory drug (NSAID), such as ibuprofen. If you have kidney problems, acetaminophen is often preferred. 
+        Also apply heat to the area with a heating pad or compress.
         {'\n'}
         <View style = {{marginVertical:"2%"}}/>
-        ● If you cannot manage the pain at home, go to a sickle cell disease day hospital or outpatient unit or an emergency room to receive additional, stronger medicines, and IV fluids. You may need to be admitted to the hospital to fully control an acute pain crisis. You may be able to return home once your pain is under better control.
+        ● If you cannot manage the pain at home, go to a sickle cell disease day hospital or outpatient unit or an emergency room to receive additional, stronger medicines, and IV fluids. You may need to be 
+        admitted to the hospital to fully control an acute pain crisis. You may be able to return home once your pain is under better control.
         <Header newSection={true}>Adopt a healthy lifestyle</Header>
         ● Manage stress: Learning how to manage stress, relax, and cope with problems can improve your emotional and physical health.     
         {'\n'}

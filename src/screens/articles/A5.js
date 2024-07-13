@@ -91,7 +91,7 @@ const A5 = () => {
         {'\n\n'}
         Severe anemia in a newborn or child who has sickle cell disease may be a result of one of two conditions:
         {'\n\n'}
-        ● Aplastic crisis : An aplastic crisis is usually caused by a parvovirus B19 infection, also called fifth disease or slapped cheek syndrome. Parvovirus B19 is a very common infection, but in sickle cell disease, it can cause the bone marrow to stop producing new red cells for a while, leading to severe anemia.
+        ● Aplastic crisis: An aplastic crisis is usually caused by a parvovirus B19 infection, also called fifth disease or slapped cheek syndrome. Parvovirus B19 is a very common infection, but in sickle cell disease, it can cause the bone marrow to stop producing new red cells for a while, leading to severe anemia.
         {'\n'}
         <View style = {{marginVertical:"2%"}}/>
         ● Splenic sequestration crisis: When red blood cells get trapped in the spleen, fewer are available to circulate in the blood and the spleen can become enlarged. This can lead to severe anemia that causes a pain crisis. 
