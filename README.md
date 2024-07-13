@@ -1,5 +1,5 @@
 # CellWise
-A mobile application to educate people about sickle cell and help track their symptoms
+A mobile application to educate people about sickle cell and help track their symptoms.
 
 ## Features
 - Learning modules enriched with informative articles
