@@ -7,6 +7,7 @@ import CustomInput from '../../components/CustomInput';
 import PageBody from '../../util/constants/PageBody';
 import CustomText from '../../components/CustomText';
 import { useUser } from '../../context/UserContext';
+import { colors } from '../../util/constants/Colors';
 
 const Login = () => {
   const nav = useNavigation();
@@ -20,8 +21,8 @@ const Login = () => {
        style = {{position:"absolute", top:'2%',left:"3%",justifyContent:"center",alignItems:"center"}}
        activeOpacity={0.8} onPress={() => nav.navigate('TabNav')}
        > 
-        <Icon name = "guest" color = "black" size = {20} type = "zocial" />
-        <CustomText margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
+        <Icon name = "guest" color = {colors.tangerine} size = {20} type = "zocial" />
+        <CustomText color={"tangerine"} margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
       </TouchableOpacity>
       <Image source={require('../../assets/images/logo.png')} resizeMode='contain' style ={{transform:[{scale:0.5}],margin:"-30%"}} />
       <CustomText margin={'2.5%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
@@ -47,9 +48,9 @@ const Login = () => {
           setEmail(''); setPassword('');
         })}
       />
-      <CustomText fontFamily={'Rubik-Medium'} color={'lightGray'} marginBottom={"25%"}>
+      <CustomText  fontFamily={'Rubik-Medium'} color={'lightGray'} marginBottom={"25%"}>
         Don't have an account?   
-        <CustomText fontFamily={'Rubik-Medium'} color={'tangerine'} onPress={() => nav.navigate('Register')}>
+        <CustomText fontFamily={'Rubik-Medium'} color={'gray'} onPress={() => nav.navigate('Register')}>
         ⠀Register Now
         </CustomText>
       </CustomText>

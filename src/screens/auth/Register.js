@@ -52,7 +52,7 @@ const Register = () => {
       />
       <CustomText fontFamily={'Rubik-Medium'} color={'lightGray'} marginBottom={"10%"}>
         Already have an account?
-        <CustomText fontFamily={'Rubik-Medium'} color={'tangerine'} onPress={() => navigation.goBack()}>
+        <CustomText fontFamily={'Rubik-Medium'} color={'gray'} onPress={() => navigation.goBack()}>
           {' '}
           ⠀Log in
         </CustomText>
