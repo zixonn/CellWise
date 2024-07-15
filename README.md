@@ -13,7 +13,8 @@ A mobile application to educate people about sickle cell and help track their sy
 <img src="https://github.com/user-attachments/assets/b5aac401-48fd-4af6-a73e-8407733f9867" alt="fourth" width="300"/>
 <img src="https://github.com/user-attachments/assets/ef9371a9-5025-4869-b5cb-1141fdfeb08c" alt="fifth" width="300"/>
 <img src="https://github.com/user-attachments/assets/658000dc-0763-47b0-adc5-086d0ae25ac4" alt="sixth" width="300"/>
-<img src="https://github.com/user-attachments/assets/3a1f0299-ca44-4f19-9829-b1f7022453ff" alt="sixth" width="300"/>
+<img src="https://github.com/user-attachments/assets/f1607d8b-476e-440d-9bf6-048199f41fba" alt="sixth" width="300"/>
+
 
 ## Installation and Setup Instructions
 
