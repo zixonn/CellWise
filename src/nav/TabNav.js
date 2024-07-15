@@ -80,7 +80,7 @@ const TabNav = () => {
                   Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
                     {
                       text: 'Yes',
-                      onPress: () => logOutUser(() => nav.navigate("AuthNav"))
+                      onPress: () => logOutUser(() => nav.navigate("AuthNav",{screen:"Login"}))
                     },
                     {text: 'No'}
                   ])
