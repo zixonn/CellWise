@@ -34,7 +34,7 @@ const ForgotPassword = () => {
   return (
     <PageBody white>
       <Icon onPress = { () => nav.goBack()} name = "arrow-back" color = "gray" size={35}
-      containerStyle={{position:"absolute",top:"2%",left:"3%"}}/>
+      containerStyle={{position:"absolute",top:"5%",left:"3%"}}/>
       <View style = {{width:"100%",justifyContent:"center", alignItems:"center",position:"absolute",top:"15%"}}>
         <CustomText margin={"3%"} fontFamily={"Rubik-SemiBold"} fontSize={"large"}>Forgot Password</CustomText>
         <CustomInput value = {email} onChangeText = {text => setEmail(text)} placeholder = "Enter email address"/>
