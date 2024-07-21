@@ -4,10 +4,10 @@
     "slug": "CellWise",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "src/assets/images/logo.png",
+    "icon": "./src/assets/images/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "src/assets/images/logo.png",
+      "image": "./src/assets/images/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,13 +17,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "src/assets/images/logo.png",
+        "foregroundImage": "./src/assets/images/logo.png",
         "backgroundColor": "#ffffff"
       },
+      "softwareKeyboardLayoutMode": "pan",
       "package": "com.zixonn.CellWise"
     },
     "web": {
-      "favicon": "src/assets/images/logo.png"
+      "favicon": "./src/assets/images/logo.png"
     },
     "plugins": [
       [
@@ -40,7 +41,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "435c1ac4-3c4a-4b49-ba62-780ad376c2bf"
+        "projectId": "cd2bae19-0f52-4611-a5ad-f7d034f6e114"
       }
     }
   }

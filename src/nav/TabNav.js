@@ -52,7 +52,7 @@ const TabNav = () => {
                 justifyContent: 'center',
                 backgroundColor: focused ? colors.gray : 'transparent',
                 width:"100%",
-                padding: "4%",
+                padding: "2%",
               }}>
                 <Icon name={iconName} type={theType} color={iconColor} size={25} />
                 <Text style={{
@@ -75,7 +75,10 @@ const TabNav = () => {
           options={{
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center',width:"100%" }}>
-                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",left:"-90%"}} 
+                <Text style={{ color: colors.white, fontFamily: "Rubik-Medium", fontSize: fontSizes.small }}>
+                  Learning Modules
+                </Text>
+                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",left:"240%"}} 
                 onPress={() => {
                   Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
                     {
@@ -85,9 +88,6 @@ const TabNav = () => {
                     {text: 'No'}
                   ])
                   }}/>
-                <Text style={{ color: colors.white, fontFamily: "Rubik-Medium", fontSize: fontSizes.small }}>
-                  Learning Modules
-                </Text>
               </View>
             ),
           }}

@@ -1,4 +1,4 @@
-import { Keyboard, StyleSheet, TextInput } from 'react-native';
+import { Keyboard, StyleSheet, TextInput,KeyboardAvoidingView,Platform } from 'react-native';
 import React from 'react';
 import { colors } from '../util/constants/Colors';
 import { fontSizes } from '../util/constants/FontSizes';
@@ -6,18 +6,19 @@ import { fontSizes } from '../util/constants/FontSizes';
 
 const MultiLineInput = (props) => {
   return (
-    <TextInput  
-    placeholder = "Describe Symptoms"
-    onChangeText={props.onChangeText}
-    value={props.value}
-    style={styles.con}
-    multiline
-    returnKeyType='done'
-
-    blurOnSubmit
-    />
+      <TextInput  
+        placeholder="Describe Symptoms"
+        onChangeText={props.onChangeText}
+        value={props.value}
+        style={styles.con}
+        multiline
+        returnKeyType='done'
+        blurOnSubmit
+        textAlignVertical='top'
+      />
   )
 }
+
 
 export default MultiLineInput
 

@@ -18,14 +18,14 @@ const Login = () => {
   return (
     <PageBody white>
       <TouchableOpacity
-       style = {{position:"absolute", top:'2%',left:"3%",justifyContent:"center",alignItems:"center"}}
+       style = {{position:"absolute", top:'5%',left:"3%",justifyContent:"center",alignItems:"center"}}
        activeOpacity={0.8} onPress={() => nav.navigate('TabNav')}
        > 
         <Icon name = "guest" color = {colors.tangerine} size = {20} type = "zocial" />
         <CustomText color={"tangerine"} margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
       </TouchableOpacity>
       <Image source={require('../../assets/images/logo.png')} resizeMode='contain' style ={{transform:[{scale:0.5}],margin:"-30%"}} />
-      <CustomText margin={'2.5%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
+      <CustomText margin={'1%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
         Log In
       </CustomText>
       <CustomText color={"tangerine"} fontFamily={'Rubik-Regular'}>{authError}</CustomText>
