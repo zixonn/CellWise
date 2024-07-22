@@ -7,8 +7,9 @@ import { useFonts } from 'expo-font';
 import ModuleNav from './src/nav/ModuleNav';
 import TabNav from './src/nav/TabNav';
 import { UserProvider } from './src/context/UserContext';
-import { registerRootComponent } from "expo";
-import { AppRegistry, } from "react-native";
+import 'react-native-gesture-handler';
+import { AppRegistry } from 'react-native';
+
 
 SplashScreen.preventAutoHideAsync();
 
@@ -46,4 +47,4 @@ export default function App() {
   );
 }
 
-
+AppRegistry.registerComponent('main', () => App);
