@@ -33,12 +33,12 @@ const Register = () => {
 
   return (
     <PageBody white>
-      <CustomText marginBottom={'3%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
+      <CustomText  fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
         Sign Up
       </CustomText>
       <CustomText color={"tangerine"} fontFamily={'Rubik-Regular'}>{regError}</CustomText>
-      <CustomInput maxLength={25} placeholder='First name' value={firstName} onChangeText={setFirstName} />
-      <CustomInput maxLength={25} placeholder='Last name' value={lastName} onChangeText={setLastName} />
+      <CustomInput maxLength={50} placeholder='First name' value={firstName} onChangeText={setFirstName} />
+      <CustomInput maxLength={50} placeholder='Last name' value={lastName} onChangeText={setLastName} />
       <CustomInput maxLength={50} placeholder='Email' value={email} onChangeText={setEmail} />
       <CustomInput maxLength={50} placeholder='Password' secureTextEntry value={password} onChangeText={setPassword} />
       <CustomInput maxLength={50} placeholder='Confirm Password' secureTextEntry value={passwordConfirm} onChangeText={setPasswordConfirm} />

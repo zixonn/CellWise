@@ -9,6 +9,7 @@ const MultiLineInput = (props) => {
       <TextInput  
         placeholder="Describe Symptoms"
         onChangeText={props.onChangeText}
+        maxLength={props.maxLength}
         value={props.value}
         style={styles.con}
         multiline

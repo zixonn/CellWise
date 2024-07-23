@@ -8,18 +8,22 @@ import PageBody from '../../util/constants/PageBody';
 import CustomText from '../../components/CustomText';
 import { useUser } from '../../context/UserContext';
 import { colors } from '../../util/constants/Colors';
+import { useEffect } from 'react';
 
 const Login = () => {
   const nav = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { loading, logInUser, authError, setAuthError } = useUser();
+  const { loading, logInUser, authError, setAuthError,setTheUser } = useUser();
 
   return (
     <PageBody white>
       <TouchableOpacity
        style = {{position:"absolute", top:'5%',left:"3%",justifyContent:"center",alignItems:"center"}}
-       activeOpacity={0.8} onPress={() => nav.navigate('TabNav')}
+       activeOpacity={0.8} onPress={() => {
+        nav.navigate('TabNav',{screen:"Learning Modules"})
+        setTheUser(null);
+      }}
        > 
         <Icon name = "guest" color = {colors.tangerine} size = {20} type = "zocial" />
         <CustomText color={"tangerine"} margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
@@ -44,7 +48,7 @@ const Login = () => {
         marginBottom = {"10%"}
         title='Log in'
         onPress={() => logInUser(email, password,() => {
-          nav.navigate("TabNav")
+          nav.navigate("TabNav",{screen:"Learning Modules"})
           setEmail(''); setPassword('');
         })}
       />

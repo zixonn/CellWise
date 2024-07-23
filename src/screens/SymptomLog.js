@@ -13,7 +13,7 @@ const SymptomLog = (props) => {
  
  const handleLog = () => {
     if(desc.length <=0){
-      Alert.alert("Error", "Please enter a description")
+      Alert.alert("Error", "Please enter a description.")
     }else{
       if (props.onLogSymptom) {
         let sympData = {
@@ -29,11 +29,12 @@ const SymptomLog = (props) => {
   };
 
   return(
-    <Overlay overlayStyle = {styles.overlay} animationType='slide' isVisible = {props.isVisible}>
+    <Overlay statusBarTranslucent overlayStyle = {styles.overlay} animationType='slide' isVisible = {props.isVisible}>
         <View style = {styles.con}>
             <Icon containerStyle = {{position:"absolute",top:'2%',left:"3%"}} name = "close" color={"gray"} size={30} onPress={props.close}/>
             <CustomText fontFamily={"Rubik-Medium"} fontSize={"medium"}>Log Your Symptoms</CustomText>
-            <MultiLineInput value = {desc} onChangeText = {text => setDesc(text)}/>
+            <CustomText fontFamily={"Rubik-Medium"} color={"gray"} fontSize={"tiny"}>500 Characters Max</CustomText>
+            <MultiLineInput value = {desc} onChangeText = {text => setDesc(text)} maxLength = {500}/>
             <LongButton title = "Log" onPress={handleLog}/>
         </View>
     </Overlay>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Animated } from 'react-native';
 import AuthNav from './src/nav/AuthNav';
 import { NavigationContainer } from '@react-navigation/native';
@@ -7,7 +7,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import ModuleNav from './src/nav/ModuleNav';
 import TabNav from './src/nav/TabNav';
-import { UserProvider, useUser } from './src/context/UserContext';
+import { useUser, UserProvider } from './src/context/UserContext';
 import 'react-native-gesture-handler';
 import { AppRegistry } from 'react-native';
 
@@ -15,7 +15,8 @@ const Stack = createStackNavigator();
 
 const AppContent = () => {
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  const { user } = useUser()
+  const { user } = useUser();
+  const navRef = useRef();
 
   const [loaded, error] = useFonts({
     'Rubik-Regular': require('./src/assets/fonts/Rubik-Regular.ttf'),
@@ -25,26 +26,39 @@ const AppContent = () => {
   });
 
   useEffect(() => {
-    if (loaded || error) {
-      SplashScreen.hideAsync();
-      Animated.timing(fadeAnim, {
-        toValue: 1,
-        duration: 500,
-        useNativeDriver: true,
-      }).start();
-    }
+    const loadResources = async () => {
+      if (loaded || error) {
+        await SplashScreen.hideAsync();
+        Animated.timing(fadeAnim, {
+          toValue: 1,
+          duration: 250,
+          useNativeDriver: true,
+        }).start();
+      }
+    };
+    loadResources();
   }, [loaded, error]);
 
-  if (!loaded && !error) {
-    return null;
+  useEffect(() => {
+    if (navRef.current) {
+      if (user) {
+        navRef.current.navigate("TabNav");
+      } else {
+        navRef.current.navigate("AuthNav");
+      }
+    }
+  }, [user]);
+
+  if (!loaded || error) {
+    return null; 
   }
 
   return (
     <Animated.View style={{ flex: 1, opacity: fadeAnim }}>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }} initialRouteName = {user ? "TabNav" : "AuthNav"}>
-            <Stack.Screen name="TabNav" component={TabNav} />
-            <Stack.Screen name="AuthNav" component={AuthNav} />
+      <NavigationContainer ref={navRef}>
+        <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
+          <Stack.Screen name="TabNav" component={TabNav} />
+          <Stack.Screen name="AuthNav" component={AuthNav} />
           <Stack.Screen name="ModuleNav" component={ModuleNav} />
         </Stack.Navigator>
       </NavigationContainer>

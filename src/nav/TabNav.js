@@ -21,6 +21,7 @@ const TabNav = () => {
       <Tabs.Navigator
         screenOptions={({ route }) => ({
           gestureEnabled: false,
+          headerTitleAlign:"center",
           headerStyle: {
             backgroundColor: colors.lochmara,
           },
@@ -28,7 +29,6 @@ const TabNav = () => {
             fontFamily: "Rubik-Medium",
             color: colors.white,
             fontSize: fontSizes.small,
-            alignSelf: "center",
           },
           tabBarStyle: {
             borderTopColor: colors.gray,
@@ -74,11 +74,11 @@ const TabNav = () => {
           component={Learn} 
           options={{
             headerTitle: () => (
-              <View style={{ flexDirection: 'row', alignItems: 'center',width:"100%" }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center',width:"100%"}}>
                 <Text style={{ color: colors.white, fontFamily: "Rubik-Medium", fontSize: fontSizes.small }}>
                   Learning Modules
                 </Text>
-                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",left:"240%"}} 
+                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",right:"160%"}} 
                 onPress={() => {
                   Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
                     {

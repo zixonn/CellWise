@@ -25,6 +25,10 @@ export const UserProvider = ({ children }) => {
     return unsubscribe;
   }, []);
 
+  const setTheUser = (user)=>{
+    setUser(user)
+  }
+
   const getErrorMessage = (error) => {
     const msg = error.message;
     if (msg.includes('(auth/invalid-email)')) {
@@ -60,7 +64,8 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      setUser(userCredential.user);
+      const user = userCredential.user;
+      setUser(user);
       navFunc();
     } catch (error) {
       setAuthError(getErrorMessage(error));
@@ -106,7 +111,7 @@ export const UserProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, loading, logInUser, registerUser, authError, regError, setRegError, logOutUser, setAuthError }}>
+    <UserContext.Provider value={{ user, loading, logInUser, registerUser, authError, regError, setRegError, logOutUser, setAuthError,setTheUser }}>
       {children}
     </UserContext.Provider>
   );
