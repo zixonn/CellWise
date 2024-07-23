@@ -9,7 +9,8 @@ import { getDate, getTime } from '../util/functions/getTimeAndDate'
 
 const SymptomLog = (props) => {
 
- const [desc,setDesc] = useState()
+ const [desc,setDesc] = useState('')
+ 
  const handleLog = () => {
     if(desc.length <=0){
       Alert.alert("Error", "Please enter a description")
