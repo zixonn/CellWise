@@ -7,4 +7,4 @@ A mobile application to educate people about sickle cell and help track their sy
 - A symptom tracker with print capabilities for easy sharing and record-keeping
 
 ## Installation 
-Android: download the APK at https://expo.dev/accounts/zixonn/projects/CellWise/builds/cc482522-58cb-40da-813d-32aa3389262d
+Android APK: https://www.dropbox.com/scl/fi/gk2fi93c5op3r6g8vfi8d/CellWise.apk?rlkey=sjvlzgpzmcp7j5fnrkp3pu6dm&st=ckhm9u94&dl=0
