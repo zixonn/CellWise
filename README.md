@@ -8,3 +8,6 @@ A mobile application to educate people about sickle cell and help track their sy
 
 ## Installation 
 Android APK (You should try and open this on your mobile device): https://drive.google.com/file/d/12CXxAzIH-SXK13hx9Ojf9CDbrsmrsqhU/view?usp=drive_link
+
+## Site
+https://cellwise.netlify.app/
