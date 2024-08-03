@@ -16,6 +16,7 @@ const SymptomTracker = ({ navigation }) => {
   const [isVisible, setVisible] = useState(false);
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [name, setName] = useState("")
 
   const logSymptom = async (symptomDesc) => {
     setLoading(true);
@@ -43,6 +44,7 @@ const SymptomTracker = ({ navigation }) => {
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       setLogs(docSnap.data().logs);
+      setName(docSnap.data().firstName + " "+ docSnap.data().lastName)
     } else {
       console.log("No such document!");
     }
@@ -106,6 +108,12 @@ const SymptomTracker = ({ navigation }) => {
       }
       h1 {
         font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-size: 15px;
         font-weight: normal;
         text-align: center;
         margin-bottom: 20px;
@@ -120,6 +128,7 @@ const SymptomTracker = ({ navigation }) => {
   </head>
   <body>
     <h1>Symptom Tracker</h1>
+    <h2>Name: ${name}</h2>
     <div>
       ${logs && logs.length > 0 && user !== null ? (
         logs.map((obj, index) => (
