@@ -33,7 +33,7 @@ const SymptomLog = (props) => {
         <View style = {styles.con}>
             <Icon containerStyle = {{position:"absolute",top:'2%',left:"3%"}} name = "close" color={"gray"} size={30} onPress={props.close}/>
             <CustomText fontFamily={"Rubik-Medium"} fontSize={"medium"}>Log Your Symptoms</CustomText>
-            <CustomText fontFamily={"Rubik-Medium"} color={"gray"} fontSize={"tiny"}>500 Characters Max</CustomText>
+            <CustomText marginTop={"1%"} fontFamily={"Rubik-Medium"} color={"gray"} fontSize={"tiny"}>500 Characters Max</CustomText>
             <MultiLineInput value = {desc} onChangeText = {text => setDesc(text)} maxLength = {500}/>
             <LongButton title = "Log" onPress={handleLog}/>
         </View>

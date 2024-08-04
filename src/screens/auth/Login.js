@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, TouchableOpacity} from 'react-native';
+import { Image, Platform, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Icon } from '@rneui/base';
 import LongButton from '../../components/LongButton';
@@ -15,11 +15,12 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { loading, logInUser, authError, setAuthError,setTheUser } = useUser();
+  const deviceOS = Platform.OS;
 
   return (
     <PageBody white>
       <TouchableOpacity
-       style = {{position:"absolute", top:'5%',left:"3%",justifyContent:"center",alignItems:"center"}}
+       style = {{position:"absolute", top:deviceOS === "android" ? "5%" : "3%",left:"5%",justifyContent:"center",alignItems:"center"}}
        activeOpacity={0.8} onPress={() => {
         nav.navigate('TabNav',{screen:"Learning Modules"})
         setTheUser(null);
@@ -29,7 +30,7 @@ const Login = () => {
         <CustomText color={"tangerine"} margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
       </TouchableOpacity>
       <Image source={require('../../assets/images/logo.png')} resizeMode='contain' style ={{transform:[{scale:0.5}],margin:"-35%"}} />
-      <CustomText margin={'1%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
+      <CustomText marginTop={'7%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
         Log In
       </CustomText>
       <CustomText color={"tangerine"} fontFamily={'Rubik-Regular'}>{authError}</CustomText>

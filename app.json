@@ -47,6 +47,16 @@
             "src/assets/fonts/Rubik-SemiBold.ttf"
           ]
         }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true,
+            "extraProguardRules": "-keep public class com.horcrux.svg.** {*;}",
+            "allowBackup": false
+          }
+        }
       ]
     ],
     "extra": {
