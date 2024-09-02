@@ -35,7 +35,7 @@ const TabNav = () => {
           },
           tabBarIcon: ({ focused }) => {
             let iconName;
-            let iconColor = focused ? colors.white : colors.gray;
+            let iconColor = focused ? colors.gray : colors.lightGray;
             if (route.name === 'Learning Modules') {
               iconName = 'school';
               theType = "ionicons"
@@ -50,13 +50,11 @@ const TabNav = () => {
               <View style={{
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: focused ? colors.gray : 'transparent',
                 width:"100%",
-                padding: "2%",
               }}>
                 <Icon name={iconName} type={theType} color={iconColor} size={25} />
                 <Text style={{
-                  color: focused ? colors.white : colors.gray,
+                  color: focused ? colors.gray : colors.lightGray,
                   fontFamily: "Rubik-Medium",
                   marginVertical: "1%",
                   fontSize: 10,
@@ -78,7 +76,7 @@ const TabNav = () => {
                 <Text style={{ color: colors.white, fontFamily: "Rubik-Medium", fontSize: fontSizes.small }}>
                   Learning Modules
                 </Text>
-                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",right:"160%"}} 
+                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",right:"160%",marginLeft:"5%"}} 
                 onPress={() => {
                   Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
                     {
