@@ -6,14 +6,11 @@ function getDate() {
   
     return `${month}/${day}/${year}`;
   }
-  
-
 
 function getTime() {
     const date = new Date();
     return date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
   }
   
-
 export {getDate, getTime}
   

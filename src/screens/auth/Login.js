@@ -28,7 +28,7 @@ const Login = () => {
         <Icon name = "guest" color = {colors.tangerine} size = {20} type = "zocial" />
         <CustomText color={"tangerine"} margin = "1%" fontFamily={'Rubik-Bold'}>Guest</CustomText>
       </TouchableOpacity>
-      <Image source={require('../../assets/images/logo.png')} resizeMode='contain' style ={{transform:[{scale:0.5}],margin:"-35%"}} />
+      <Image source={require('../../assets/images/config/logo.png')} resizeMode='contain' style ={{transform:[{scale:0.45}],margin:"-35%"}} />
       <CustomText margin={'1%'} fontFamily={'Rubik-SemiBold'} fontSize={'XL'}>
         Log In
       </CustomText>
