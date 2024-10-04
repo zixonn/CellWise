@@ -21,7 +21,9 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
+      setLoading(false); 
     });
+    setLoading(true); 
     return unsubscribe;
   }, []);
 
@@ -74,6 +76,7 @@ export const UserProvider = ({ children }) => {
       setLoading(false);
     }
   };
+  
 
   const registerUser = async (firstName, lastName, email, password, navFunc) => {
     setLoading(true);

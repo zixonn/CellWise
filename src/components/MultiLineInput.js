@@ -1,4 +1,4 @@
-import { Keyboard, StyleSheet, TextInput,KeyboardAvoidingView,Platform } from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 import React from 'react';
 import { colors } from '../util/constants/Colors';
 import { fontSizes } from '../util/constants/FontSizes';
