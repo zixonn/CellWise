@@ -4,21 +4,12 @@
     "slug": "CellWise",
     "version": "1.0.0",
     "orientation": "portrait",
-<<<<<<< HEAD
     "icon": "./src/assets/images/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
-=======
-    "icon": "./src/assets/images/config/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./src/assets/images/config/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff",
->>>>>>> b548a5384a03bcfdb23af8b836868b4fe4283a3c
     },
     "ios": {
       "supportsTablet": true,
@@ -26,11 +17,7 @@
     },
     "android": {
       "adaptiveIcon": {
-<<<<<<< HEAD
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
-=======
-        "foregroundImage": "./src/assets/images/config/adaptive-icon.png",
->>>>>>> b548a5384a03bcfdb23af8b836868b4fe4283a3c
         "backgroundColor": "#ffffff"
       },
       "softwareKeyboardLayoutMode": "pan",
