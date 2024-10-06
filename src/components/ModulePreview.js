@@ -8,7 +8,7 @@ const ModulePreview = (props) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
-      activeOpacity={0.8} 
+      activeOpacity={0.9} 
       style={[styles.con, props.style]}
       onPress={() => navigation.navigate("ModuleNav", {
         screen: "Articles",

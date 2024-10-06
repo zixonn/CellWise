@@ -15,14 +15,11 @@ const Glossary = () => {
     <PageBody white>
       <View style={{ flex: 1, width: '100%' }}>
         <View style={{ justifyContent: 'center', alignItems: 'center', paddingVertical: '6%' }}>
-          <CustomText color="gray" fontFamily={"Rubik-SemiBold"} fontSize={"small"} textAlign={"left"} width="80%">Search Glossary</CustomText>
           <CustomInput
             value={search}
             onChangeText={text => setSearch(text)}
-            placeholder="Enter Word"
+            placeholder="Search"
             maxLength={50}
-            padding="3.5%"
-            width="80%"
           />
         </View>
         <View style={{ justifyContent: 'center', alignItems: 'center', height: '100%'}}>

@@ -1,101 +1,78 @@
 import React from 'react';
-import { colors } from "../util/constants/Colors";
-import { fontSizes } from "../util/constants/FontSizes";
 import { StatusBar } from 'expo-status-bar';
 import { Icon } from '@rneui/base';
-import { Alert, Text, View } from 'react-native';
-import { useUser } from '../context/UserContext';
+import { Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Learn from "../screens/Learn";
-import Glossary from "../screens/Glossary"
-import SymptomTracker  from "../screens/SymptomTracker";
+import Learn from '../screens/Learn';
+import Glossary from '../screens/Glossary';
+import SymptomTracker from '../screens/SymptomTracker';
+import { colors } from '../util/constants/Colors';
+import { fontSizes } from '../util/constants/FontSizes';
 
 const TabNav = () => {
   const Tabs = createBottomTabNavigator();
-  const {logOutUser} = useUser()
-  const nav = useNavigation()
+  const nav = useNavigation();
+
+  const renderIcon = (routeName, focused) => {
+    const icons = {
+      'Learning Modules': { name: 'school', type: 'ionicons' },
+      'Glossary': { name: 'book', type: 'entypo' },
+      'Symptom Tracker': { name: 'health-and-safety', type: 'alert' },
+    };
+
+    const icon = icons[routeName];
+    const color = focused ? colors.gray : colors.lightGray;
+
+    return (
+      <View style={{ alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+        <Icon name={icon.name} type={icon.type} color={color} size={23} />
+        <Text style={{ color, fontFamily: 'Rubik-Medium', fontSize: 10, marginVertical: '1%' }}>
+          {routeName}
+        </Text>
+      </View>
+    );
+  };
+
   return (
     <>
-      <StatusBar style='light' />
+      <StatusBar style="light" />
       <Tabs.Navigator
         screenOptions={({ route }) => ({
           gestureEnabled: false,
-          headerTitleAlign:"center",
-          headerStyle: {
-            backgroundColor: colors.lochmara,
-          },
-          headerTitleStyle: {
-            fontFamily: "Rubik-Medium",
-            color: colors.white,
-            fontSize: fontSizes.small,
-          },
-          tabBarStyle: {
-            borderTopColor: colors.gray,
-          },
-          tabBarIcon: ({ focused }) => {
-            let iconName;
-            let iconColor = focused ? colors.gray : colors.lightGray;
-            if (route.name === 'Learning Modules') {
-              iconName = 'school';
-              theType = "ionicons"
-            } else if (route.name === 'Glossary') {
-              iconName = 'book';
-              theType = "entypo"
-            } else if (route.name === 'Symptom Tracker') {
-              iconName = 'health-and-safety';
-              theType = "alert"
-            }
-            return (
-              <View style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                width:"100%",
-              }}>
-                <Icon name={iconName} type={theType} color={iconColor} size={25} />
-                <Text style={{
-                  color: focused ? colors.gray : colors.lightGray,
-                  fontFamily: "Rubik-Medium",
-                  marginVertical: "1%",
-                  fontSize: 10,
-                }}>
-                  {route.name}
-                </Text>
-              </View>
-            );
-          },
-          tabBarLabel: () => null, 
+          headerTitleAlign: 'center',
+          headerStyle: { backgroundColor: colors.lochmara },
+          headerTitleStyle: { fontFamily: 'Rubik-Medium', color: colors.white, fontSize: fontSizes.small },
+          tabBarStyle: { borderTopColor: colors.gray },
+          tabBarIcon: ({ focused }) => renderIcon(route.name, focused),
+          tabBarLabel: () => null,
         })}
       >
-         <Tabs.Screen 
-          name="Learning Modules" 
-          component={Learn} 
+        <Tabs.Screen
+          name="Learning Modules"
+          component={Learn}
           options={{
             headerTitle: () => (
-              <View style={{ flexDirection: 'row', alignItems: 'center',width:"100%"}}>
-                <Text style={{ color: colors.white, fontFamily: "Rubik-Medium", fontSize: fontSizes.small }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', width: '100%' }}>
+                <Text style={{ color: colors.white, fontFamily: 'Rubik-Medium', fontSize: fontSizes.small }}>
                   Learning Modules
                 </Text>
-                <Icon name="exit-to-app" color={colors.white} size={25} containerStyle={{ position:"absolute",right:"160%",marginLeft:"5%"}} 
-                onPress={() => {
-                  Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
-                    {
-                      text: 'Yes',
-                      onPress: () => logOutUser(() => nav.navigate("AuthNav",{screen:"Login"}))
-                    },
-                    {text: 'No'}
-                  ])
-                  }}/>
+                <Icon
+                  name="settings"
+                  color={colors.white}
+                  size={25}
+                  onPress={() => nav.navigate('Settings')}
+                  containerStyle={{ position: 'absolute', right: '160%', marginLeft: '5%' }}
+                />
               </View>
             ),
           }}
         />
         <Tabs.Screen name="Glossary" component={Glossary} />
-        <Tabs.Screen name="Symptom Tracker" component={SymptomTracker } />
+        <Tabs.Screen name="Symptom Tracker" component={SymptomTracker} />
       </Tabs.Navigator>
     </>
   );
 };
-
 
 export default TabNav;

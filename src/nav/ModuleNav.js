@@ -8,7 +8,7 @@ import Article from "../screens/articles/Article"
 import ArticleList from "../screens/articles/ArticleList"
 
 const ModuleNav = () => {
-    const Stack = createStackNavigator()
+  const Stack = createStackNavigator()
   return (
     <>
         <StatusBar style='light' />
@@ -18,7 +18,7 @@ const ModuleNav = () => {
           headerTitleStyle:{fontFamily:"Rubik-Medium",color:colors.white,fontSize:fontSizes.small,alignSelf:"center"},
           headerBackTitle:" ",
           headerTitleAlign:"center",
-          headerBackTitleVisible:false,headerBackImage: () => <Icon name = "arrow-back" color={colors.white} style={{margin:'10%'}}/>
+          headerBackTitleVisible:false,headerBackImage: () => <Icon name = "arrow-back" color={colors.white} style={{margin:'8%'}}/>
           }}>
           <Stack.Screen name = "Articles" component={ArticleList}/>
           <Stack.Screen name = "Article" component={Article} options={({ route }) => ({

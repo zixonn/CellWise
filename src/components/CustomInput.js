@@ -4,8 +4,6 @@ import { colors } from '../util/constants/Colors';
 import { fontSizes } from '../util/constants/FontSizes';
 
 const CustomInput = (props) => {
-  const { width = '75%', padding = '5%' } = props; 
-
   return (
     <TextInput  
       onSubmitEditing={props.onSubmitEditing}
@@ -17,7 +15,7 @@ const CustomInput = (props) => {
       value={props.value}
       placeholder={props.placeholder}
       placeholderTextColor={colors.lightGray}
-      style={[styles.con, { width: width,padding:padding }]}
+      style={styles.con}
     />
   );
 };
@@ -29,10 +27,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Rubik-Regular',
     fontSize: fontSizes.small,
     borderWidth: 1,
-    borderRadius: 10,
     borderColor: colors.lightGray,
     paddingHorizontal: '3%',
     color: colors.gray,
     margin: '2%',
+    width:"85%",
+    padding:"3%"
   },
 });
