@@ -1,8 +1,7 @@
-import { StyleSheet, View, ScrollView } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import PageBody from '../util/constants/PageBody'
 import glossaryWords from '../util/constants/glossaryWords'
-import CustomText from "../components/CustomText"
 import CustomInput from "../components/CustomInput"
 import Word from '../components/Word'
 

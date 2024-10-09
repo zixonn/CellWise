@@ -1,8 +1,8 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet,  TouchableOpacity, View } from 'react-native';
 import React from 'react';
-import PageBody from '../../util/constants/PageBody';
-import { colors } from '../../util/constants/Colors';
-import CustomText from '../../components/CustomText';
+import PageBody from '../util/constants/PageBody';
+import { colors } from '../util/constants/Colors';
+import CustomText from '../components/CustomText';
 import { useNavigation } from '@react-navigation/native';
 
 const ArticleList = ({ route }) => {

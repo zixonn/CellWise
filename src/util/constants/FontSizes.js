@@ -1,4 +1,3 @@
-
 const fontSizes = {
     tiny:12,
     small:16,

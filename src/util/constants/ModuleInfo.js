@@ -1,4 +1,3 @@
-
 const OverviewInfo = {
     titles:[
         "What Is Sickle Cell Disease?",
