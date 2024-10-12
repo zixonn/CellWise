@@ -10,15 +10,15 @@ const Learn = () => {
     <PageBody >
       <ScrollView style = {{width:"100%"}} contentContainerStyle = {{flexGrow:1, alignItems:"center"}}>
         <View style = {{marginBottom:"130%",width:"100%"}}>
-          <ModulePreview source = {require("../assets/images/preview/overview.png")} label = "Overview" style = {{marginTop:"5%"}} time = {"15 min"} bg = "bg1.png"
+          <ModulePreview source = {require("../assets/images/overview.png")} label = "Overview" style = {{marginTop:"5%"}} time = {"15 min"} bg = "bg1.png"
            articleInfo = {OverviewInfo}/>
-          <ModulePreview source = {require("../assets/images/preview/symptoms.png")} label = "Symptoms"  time = {"15 min"}  bg = "bg1.png" 
+          <ModulePreview source = {require("../assets/images/symptoms.png")} label = "Symptoms"  time = {"15 min"}  bg = "bg1.png" 
           articleInfo = {SymptomsInfo}/>
-          <ModulePreview source = {require("../assets/images/preview/diagnosis.png")} label = "Diagnosis"  time = {"15 min"}  bg = "bg1.png" 
+          <ModulePreview source = {require("../assets/images/diagnosis.png")} label = "Diagnosis"  time = {"15 min"}  bg = "bg1.png" 
           articleInfo = {DiagnosisInfo}/>
-          <ModulePreview source = {require("../assets/images/preview/treatment.png")} label = "Treatment"  time = {"15 min"}  bg = "bg1.png" 
+          <ModulePreview source = {require("../assets/images/treatment.png")} label = "Treatment"  time = {"15 min"}  bg = "bg1.png" 
           articleInfo = {TreatmentInfo}/>
-          <ModulePreview source = {require("../assets/images/preview/living.png")} label = "Living With Sickle Cell"  time = {"15 min"}  bg = "bg1.png" 
+          <ModulePreview source = {require("../assets/images/living.png")} label = "Living With Sickle Cell"  time = {"15 min"}  bg = "bg1.png" 
           articleInfo = {LivingInfo}/>
         </View>
       </ScrollView>

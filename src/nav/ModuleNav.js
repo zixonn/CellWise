@@ -4,8 +4,8 @@ import { StatusBar } from 'expo-status-bar'
 import { colors } from "../util/constants/Colors"
 import { fontSizes } from "../util/constants/FontSizes"
 import { Icon } from "@rneui/base"
-import Article from "../screens/articles/Article"
-import ArticleList from "../screens/articles/ArticleList"
+import Article from "../screens/Article"
+import ArticleList from "../screens/ArticleList"
 
 const ModuleNav = () => {
   const Stack = createStackNavigator()

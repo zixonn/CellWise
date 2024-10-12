@@ -1,7 +1,7 @@
 import React from 'react'
-import PageBody from '../../util/constants/PageBody'
+import PageBody from '../util/constants/PageBody'
 import { ScrollView} from 'react-native'
-import { findArticle } from '../../util/functions/ArticleLoader';
+import { findArticle } from '../util/functions/ArticleLoader';
 
 const Article = ({route}) => {
   const { articleTitle } = route.params;
