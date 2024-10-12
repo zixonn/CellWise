@@ -30,6 +30,14 @@ const styles = StyleSheet.create({
         marginVertical:'1%',
         backgroundColor:"white",
         backgroundColor:colors.lochmara,
+        elevation: 5,
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.5,
     },
     bottomHalf:{
         borderWidth:1,

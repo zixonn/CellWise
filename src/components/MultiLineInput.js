@@ -7,7 +7,8 @@ import { fontSizes } from '../util/constants/FontSizes';
 const MultiLineInput = (props) => {
   return (
       <TextInput  
-        placeholder="Describe Symptoms"
+        placeholder="Describe your symptoms"
+        placeholderTextColor={"lightgray"}
         onChangeText={props.onChangeText}
         maxLength={props.maxLength}
         value={props.value}

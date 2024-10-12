@@ -3,7 +3,7 @@ import React from 'react'
 import CustomText from './CustomText'
 const BulletPoint = ({children}) => {
   return (
-    <View style={{ marginVertical:'0.5%'}}>
+    <View style={{ marginVertical:'1%'}}>
     <CustomText width="90%" fontFamily="Rubik-Regular" color="gray">
       ● {children}
     </CustomText>

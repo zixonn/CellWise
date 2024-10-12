@@ -57,13 +57,6 @@ const TabNav = () => {
                 <Text style={{ color: colors.white, fontFamily: 'Rubik-Medium', fontSize: fontSizes.small }}>
                   Learning Modules
                 </Text>
-                <Icon
-                  name="settings"
-                  color={colors.white}
-                  size={25}
-                  onPress={() => nav.navigate('Settings')}
-                  containerStyle={{ position: 'absolute', right: '160%', marginLeft: '5%' }}
-                />
               </View>
             ),
           }}
@@ -76,3 +69,14 @@ const TabNav = () => {
 };
 
 export default TabNav;
+
+
+/**
+ *           <Icon
+                  name="settings"
+                  color={colors.white}
+                  size={25}
+                  onPress={() => nav.navigate('Settings')}
+                  containerStyle={{ position: 'absolute', right: '160%', marginLeft: '5%' }}
+                />
+ */

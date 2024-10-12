@@ -1,6 +1,6 @@
 import { StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 import React from 'react';
-import { colors } from '../util/constants/Colors'
+import { colors } from '../util/constants/Colors';
 import CustomText from "../components/CustomText";
 import { useNavigation } from '@react-navigation/native';
 
@@ -15,15 +15,15 @@ const ModulePreview = (props) => {
         params: { articleInfo: props.articleInfo }
       })} 
     >
-      <ImageBackground source={props.source} style={styles.imageBackground}/>
+      <ImageBackground source={props.source} style={styles.imageBackground} />
       <CustomText 
           margin={"3%"} 
           fontFamily={"Rubik-Bold"} 
           color={"white"} 
           fontSize={"large"}
-        >
-          {props.label}
-        </CustomText>
+      >
+        {props.label}
+      </CustomText>
     </TouchableOpacity>
   );
 };
@@ -39,10 +39,18 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     justifyContent: "flex-end",
     overflow: "hidden",
-    backgroundColor:colors.tangerine,
+    backgroundColor: colors.tangerine,
+    elevation: 5,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
   },
   imageBackground: {
-    position:"absolute",
+    position: "absolute",
     width: "100%",
     height: "100%",
     resizeMode: "cover", 
