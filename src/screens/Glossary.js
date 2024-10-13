@@ -1,8 +1,7 @@
-import { View, ScrollView } from 'react-native'
+import { View, ScrollView, TextInput, StyleSheet } from 'react-native'
 import React, { useState } from 'react'
 import PageBody from '../util/constants/PageBody'
 import glossaryWords from '../util/constants/glossaryWords'
-import CustomInput from "../components/CustomInput"
 import Word from '../components/Word'
 
 const Glossary = () => {
@@ -14,11 +13,13 @@ const Glossary = () => {
     <PageBody white>
       <View style={{ flex: 1, width: '100%' }}>
         <View style={{ justifyContent: 'center', alignItems: 'center', paddingVertical: '6%' }}>
-          <CustomInput
+          <TextInput
             value={search}
             onChangeText={text => setSearch(text)}
+            placeholderTextColor={"lightgray"}
             placeholder="Search"
             maxLength={50}
+            style={styles.input}
           />
         </View>
         <View style={{ justifyContent: 'center', alignItems: 'center', height: '100%'}}>
@@ -33,6 +34,19 @@ const Glossary = () => {
     </PageBody>
   )
 }
+
+const styles = StyleSheet.create({
+  input:{
+    fontFamily: 'Rubik-Regular',
+    borderWidth: 1,
+    borderColor: "lightgray",
+    paddingHorizontal: '3%',
+    color: "gray",
+    margin: '2%',
+    width:"85%",
+    padding:"3%"
+  }
+})
 
 export default Glossary
 

@@ -1,85 +1,124 @@
-import { Alert, StyleSheet, Button, View } from 'react-native';
+import { Alert, StyleSheet, Button, View, TextInput } from 'react-native';
 import React, { useState } from 'react';
-import { Overlay } from '@rneui/base';
 import CustomText from '../components/CustomText';
-import { Icon } from '@rneui/base';
-import MultiLineInput from '../components/MultiLineInput';
 import { getDate, getTime } from '../util/functions/getTimeAndDate';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useNavigation } from '@react-navigation/native';
+import { Divider } from '@rneui/base';
 
 const SYMPTOM_LOG_KEY = 'SYMPTOM_LOGS';
 
-const SymptomLog = (props) => {
+const SymptomLog = () => {
+  const [desc, setDesc] = useState('');
+  const navigation = useNavigation();
 
- const [desc, setDesc] = useState('');
+  const handleLog = async () => {
+    if (!desc.trim()) {
+      Alert.alert('Error', 'Please enter a description.');
+      return;
+    }
 
- const handleLog = async () => {
-    if (desc.length <= 0) {
-      Alert.alert("Error", "Please enter a description.");
-    } else {
-      if (props.onLogSymptom) {
-        let sympData = {
-          date: getDate(),
-          time: getTime(),
-          description: desc,
-        };
+    const symptomData = {
+      date: getDate(),
+      time: getTime(),
+      description: desc.trim(),
+    };
 
-        await saveSymptomLog(sympData); 
-
-        props.onLogSymptom(sympData);
-      }
+    try {
+      await saveSymptomLog(symptomData);
       setDesc('');
-      props.close();
+      navigation.navigate("Tracker", { newLogAdded: true })
+    } catch (error) {
+      Alert.alert('Error', 'Failed to save log.');
     }
   };
 
   const saveSymptomLog = async (log) => {
     try {
       const existingLogs = await AsyncStorage.getItem(SYMPTOM_LOG_KEY);
-      let logs = existingLogs ? JSON.parse(existingLogs) : [];
+      const logs = existingLogs ? JSON.parse(existingLogs) : [];
       logs.push(log);
       await AsyncStorage.setItem(SYMPTOM_LOG_KEY, JSON.stringify(logs));
     } catch (e) {
-      console.log(e);
-      Alert.alert("Error", "Failed to save log.");
+      console.error(e);
+      throw new Error('Failed to save log');
     }
   };
 
   const handleCancel = () => {
-    setDesc(''); 
-    props.close();
+    setDesc('');
+    navigation.goBack(); 
   };
 
   return (
-    <Overlay statusBarTranslucent overlayStyle={styles.overlay} animationType='slide' isVisible={props.isVisible}>
-        <View style={styles.con}>
-            <CustomText fontFamily={"Rubik-Medium"} fontSize={"medium"}>Create Entry</CustomText>
-            <CustomText marginTop={"1%"} fontFamily={"Rubik-Medium"} color={"gray"} fontSize={"tiny"}>500 Characters Max</CustomText>
-            <MultiLineInput value={desc} onChangeText={text => setDesc(text)} maxLength={500}/>
-            <View style = {{flexDirection:"row",gap:20}}>
-              <Button title="Cancel"  onPress={handleCancel}  />
-              <Button title="Create" onPress={handleLog} disabled = {desc.length <= 0} />
-            </View>
-        </View>
-    </Overlay>
+    <View style={styles.con}>
+      <TextInput
+       value={desc} 
+       maxLength={300} 
+       style = {styles.input}
+       onChangeText={setDesc} 
+       placeholder="Describe your symptoms..."
+       placeholderTextColor={"lightgray"}
+       returnKeyType='done'
+       textAlignVertical='top'
+       blurOnSubmit = {true}
+       multiline = {true}
+       autoCorrect
+      />
+      <View style={styles.buttonContainer}>
+        <Button title="Cancel" onPress={handleCancel} />
+        <Button title="Create" onPress={handleLog} disabled={!desc.trim()} />
+      </View>
+      <Divider style = {{width:"100%", marginVertical:"6%" }} />
+      <View style={styles.tipsContainer}>
+        <CustomText fontFamily={"Rubik-SemiBold"} color = "gray" >
+          Tips for Describing Sickle Cell Symptoms:
+        </CustomText>
+        <CustomText fontFamily={"Rubik-Regular"} color={"gray"}>
+        • Be specific about the symptoms you are experiencing.
+        </CustomText>
+        <CustomText fontFamily={"Rubik-Regular"} color={"gray"}>
+        • Note the duration and intensity of each symptom.
+        </CustomText>
+        <CustomText fontFamily={"Rubik-Regular"} color={"gray"}>
+        • Describe any triggers or factors that worsen your symptoms.
+        </CustomText>
+        <CustomText fontFamily={"Rubik-Regular"} color={"gray"}>
+        • Include any medications you have taken and their effects.
+        </CustomText>
+        <CustomText fontFamily={"Rubik-Regular"} color={"gray"}>
+        • Mention any related symptoms, such as fatigue or fever.
+        </CustomText>
+      </View>
+    </View>
   );
 };
 
 export default SymptomLog;
 
 const styles = StyleSheet.create({
-    overlay: {
-        backgroundColor: "white",
-        width: "100%",
-        height: "75%",
-        position: "absolute",
-        bottom: "0%",
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20
-    },
-    con: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    }
+  con: {
+    flex: 1,
+    backgroundColor: "white",
+    alignItems: "center",
+    padding:"3%"
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    alignSelf: "flex-start",
+    gap: 10,
+    marginLeft: "3%",
+  },
+  input:{
+    fontFamily: 'Rubik-Regular',
+    borderWidth: 1,
+    borderColor:"lightgray",
+    color: "gray",
+    padding: '3%',
+    margin: '5%',
+    width:"95%",
+    height:"20%",
+  }
 });
+
+

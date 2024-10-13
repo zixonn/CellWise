@@ -4,7 +4,7 @@ function getDate() {
     const day = date.getDate();
     const year = date.getFullYear().toString().slice(-2); 
   
-    return `${month}/${day}/${year}`;
+    return `${month}-${day}-${year}`;
   }
 
 function getTime() {

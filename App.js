@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import ModuleNav from './src/nav/ModuleNav';
 import TabNav from './src/nav/TabNav';
-import Settings from './src/screens/Settings';
+import SymptomLog from './src/screens/SymptomLog';
+import { colors } from './src/util/constants/Colors';
+import { fontSizes } from './src/util/constants/FontSizes';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -27,14 +29,27 @@ const App = () => {
     return null;
   }
   
-  const Stack = createStackNavigator();
+  const Stack = createNativeStackNavigator()
 
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
         <Stack.Screen name="TabNav" component={TabNav} />
         <Stack.Screen name="ModuleNav" component={ModuleNav} />
-        <Stack.Screen name = "Settings" component={Settings}/>
+        <Stack.Screen name = "Log" component={SymptomLog}
+        options={{
+          title:"Create Entry",
+          headerShown: true, 
+          headerTitleAlign: 'center',
+          headerStyle: { backgroundColor: colors.lochmara }, 
+          headerTitleStyle: { 
+            fontFamily: 'Rubik-Medium', 
+            color: colors.white, 
+            fontSize: fontSizes.small 
+          },
+          headerBackVisible:false
+        }} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
