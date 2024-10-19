@@ -16,7 +16,7 @@ const Glossary = () => {
           <TextInput
             value={search}
             onChangeText={text => setSearch(text)}
-            placeholderTextColor={"lightgray"}
+            placeholderTextColor={"darkgray"}
             placeholder="Search"
             maxLength={50}
             style={styles.input}

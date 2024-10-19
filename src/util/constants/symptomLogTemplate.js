@@ -59,7 +59,7 @@ export const getSymptomLogHtml = (logs) => `
   </head>
   <body>
     <h1>Symptom Tracker</h1>
-    <h2>Your Logged Symptoms</h2>
+    <h2>My Logged Symptoms</h2>
     <div>
       ${logs.length > 0
         ? logs
