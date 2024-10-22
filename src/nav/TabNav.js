@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Icon } from '@rneui/base';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Learn from '../screens/Learn';
 import Glossary from '../screens/Glossary';
@@ -9,7 +9,7 @@ import SymptomTracker from '../screens/SymptomTracker';
 import { colors } from '../util/constants/Colors';
 import { fontSizes } from '../util/constants/FontSizes';
 
-const TabNav = () => {
+const TabNav = ({navigation}) => {
   const Tabs = createBottomTabNavigator();
   const renderIcon = (routeName, focused) => {
     const icons = {
@@ -45,7 +45,15 @@ const TabNav = () => {
           tabBarLabel: () => null,
         })}
       >
-        <Tabs.Screen name="Learn" component={Learn} options={{title:"Learning Modules"}} />
+        <Tabs.Screen name="Learn" component={Learn} options={{
+          title:"Learning Modules",
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+              <Icon name="settings" color={colors.white} size={23} style={{ marginLeft: "20%" }} />
+            </TouchableOpacity>
+          )
+        }} 
+          />
         <Tabs.Screen name="Glossary" component={Glossary} />
         <Tabs.Screen name="Tracker" component={SymptomTracker} options={{title:"Symptom Tracker"}} />
       </Tabs.Navigator>
