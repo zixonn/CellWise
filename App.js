@@ -59,7 +59,7 @@ const App = () => {
             fontFamily: 'Rubik-Medium', 
             color: colors.white, 
             fontSize: fontSizes.small 
-          },
+          }
         }} 
         />
       </Stack.Navigator>
