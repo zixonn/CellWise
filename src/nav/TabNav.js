@@ -49,7 +49,7 @@ const TabNav = ({navigation}) => {
           title:"Learning Modules",
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
-              <Icon name="settings" color={colors.white} size={23} style={{ marginLeft: "20%" }} />
+              <Icon name="info" color={colors.white} size={23} style={{ marginLeft: "20%" }} />
             </TouchableOpacity>
           )
         }} 

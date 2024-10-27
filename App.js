@@ -59,7 +59,9 @@ const App = () => {
             fontFamily: 'Rubik-Medium', 
             color: colors.white, 
             fontSize: fontSizes.small 
-          }
+          },
+          title:"App Info",
+          headerBackVisible:false
         }} 
         />
       </Stack.Navigator>
