@@ -9,9 +9,7 @@ import Settings from "./src/screens/Settings"
 import SymptomLog from './src/screens/SymptomLog';
 import { colors } from './src/util/constants/Colors';
 import { fontSizes } from './src/util/constants/FontSizes';
-import { Icon } from '@rneui/base';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Alert } from 'react-native';
 import DisclaimerAlert from './src/util/functions/AlertDisclaimer';
 
 SplashScreen.preventAutoHideAsync();
