@@ -10,6 +10,9 @@ import SymptomLog from './src/screens/SymptomLog';
 import { colors } from './src/util/constants/Colors';
 import { fontSizes } from './src/util/constants/FontSizes';
 import { Icon } from '@rneui/base';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Alert } from 'react-native';
+import DisclaimerAlert from './src/util/functions/AlertDisclaimer';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -22,16 +25,35 @@ const App = () => {
   });
   
   useEffect(() => {
-    if (loaded || error) {
+    if (loaded) {
       SplashScreen.hideAsync();
+    }
+    if (error) {
+      console.log("Error loading fonts:", error);
     }
   }, [loaded, error]);
 
-  if (!loaded && !error) {
+
+  useEffect(() => {
+    async function showDisclaimer() {
+      try {
+        const isDisclaimerShown = await AsyncStorage.getItem("DISCLAIMER-MSG-1");
+        if (isDisclaimerShown === null) {
+          await AsyncStorage.setItem("DISCLAIMER-MSG-1", "SHOWN");
+          DisclaimerAlert()
+        }
+      } catch (error) {
+        console.log("Error displaying disclaimer:", error);
+      }
+    }
+    showDisclaimer();
+  }, []);
+
+  const Stack = createNativeStackNavigator()
+
+  if (!loaded) {
     return null;
   }
-  
-  const Stack = createNativeStackNavigator()
 
   return (
     <NavigationContainer>
