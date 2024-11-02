@@ -83,15 +83,15 @@ const SymptomTracker = () => {
     <PageBody white>
       <View style={{ flexDirection: 'row', alignItems: 'flex-start', padding: '3%' }}>
         {logs.length > 0 && <Button title="New Entry" onPress={openSymptomLog} />}
-        {logs.length >= 3 && (
-          <View style={{ marginLeft: 10 }}>
-            <Button title="Print Tracker" onPress={print} />
+        {logs.length > 0 && (
+          <View style={{ marginLeft: "1%" }}>
+            <Button title="Reset Tracker" onPress={confirmClearLogs} />
           </View>
         )}
         {logs.length > 0 && (
-          <View style={{ marginLeft: 10 }}>
-            <Button title="Reset Tracker" onPress={confirmClearLogs} />
-          </View>
+        <View style={{ marginLeft: "1%" }}>
+            <Button disabled = {logs.length < 3} title="Print (3+ Logs)" onPress={print} />
+        </View>
         )}
       </View>
       <View style={{ flex: 1, width: '100%' }}>
