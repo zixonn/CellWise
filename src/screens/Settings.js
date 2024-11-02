@@ -22,11 +22,6 @@ const Settings = ({navigation}) => {
         <Text style = {styles.header}>Disclaimer</Text>
         <CustomText onPress={DisclaimerAlert} color={"lochmara"}>View</CustomText>
       </View>
-      <Divider  style = {{width:"90%", marginVertical:"3%" }}/>
-      <View style = {{width:"90%", flexDirection:"row", justifyContent:"space-between",alignItems:"center"}}>
-        <Text style = {styles.header}>Version</Text>
-        <Text>1.0.0</Text>
-      </View>
       <View style = {{justifyContent:"flex-start",alignSelf:"flex-start",margin:"5%"}}>
         <Button title='Back' onPress={() => navigation.goBack()} />
       </View>
