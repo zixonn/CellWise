@@ -1,8 +1,18 @@
-# CellWise
-A mobile application to educate people about sickle cell and help track their symptoms
+## Installation and Setup Instructions
 
-## Features
-- Learning modules enriched with informative articles
-- A detailed glossary for exploring and understanding sickle cell-related terms
-- A symptom tracker with print capabilities for easy sharing and record-keeping
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+
+Installation:
+
+`npm install`  
+
+To Run Test Suite:  
+
+`npx expo start` 
+
+To Visit App: Scan QR from console
+
+**YOU NEED EXPO GO INSTALLED ON YOUR PHONE TO ACCESS**
+
+
 
