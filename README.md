@@ -1,18 +1,6 @@
-## Installation and Setup Instructions
+# CellWise 
+Originally created for the American Sickle Cell Anemia Association (ASCAA), CellWise is an essential app for understanding and managing sickle cell disease. Whether you're living with sickle cell or learning about it, CellWise provides valuable resources for education and support. 
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+DISCLAIMER: All information provided is only for educational and informational purposes, specifically for sickle cell anemia. It is not a substitute for professional advice.
 
-Installation:
-
-`npm install`  
-
-To Run Test Suite:  
-
-`npx expo start` 
-
-To Visit App: Scan QR from console
-
-**YOU NEED EXPO GO INSTALLED ON YOUR PHONE TO ACCESS**
-
-
-
+Download for Android: https://play.google.com/store/apps/details?id=com.nnadozi.CellWise
