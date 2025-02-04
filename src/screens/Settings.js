@@ -22,7 +22,7 @@ const Settings = ({navigation}) => {
         <Text style = {styles.header}>Disclaimer</Text>
         <CustomText onPress={DisclaimerAlert} color={"lochmara"}>View</CustomText>
       </View>
-      <View style = {{justifyContent:"flex-start",alignSelf:"flex-start",margin:"5%"}}>
+      <View style = {{justifyContent:"flex-start",alignSelf:"flex-start",margin:"4%"}}>
         <Button title='Back' onPress={() => navigation.goBack()} />
       </View>
     </View>

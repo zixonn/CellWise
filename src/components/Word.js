@@ -17,6 +17,7 @@ const Word = (props) => {
     <Modal  animationType='fade' transparent visible={visible} onRequestClose={() => { setVisible(!visible) }}>
         <View style = {styles.modalContainer}>
             <View style = {styles.modalContent}>
+                <Icon containerStyle={{alignSelf:"flex-end"}} name='close' size={25} onPress={() => setVisible(!visible)}  />
                 <CustomText fontFamily={"Rubik-SemiBold"} fontSize={"medium"} >
                     Term: ‎ 
                     <CustomText fontFamily={"Rubik-Regular"}>
@@ -30,8 +31,6 @@ const Word = (props) => {
                         {props.def}
                     </CustomText>
                 </CustomText>
-                <View style = {{marginVertical:"3%"}}></View>
-                <Button title='close' onPress={() => setVisible(!visible)} />
             </View>
         </View>
     </Modal>
@@ -71,7 +70,7 @@ const styles = StyleSheet.create({
         width:"90%",
         alignItems: 'flex-start',
         justifyContent:"center",
-        padding:"5%"
+        padding:"4%"
     },
     icon:{
     
