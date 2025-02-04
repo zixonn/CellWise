@@ -118,6 +118,10 @@ const styles = StyleSheet.create({
     margin: '5%',
     width:"95%",
     height:"20%",
+  },
+  tipsContainer:{
+    alignSelf:"flex-start",
+    marginHorizontal:"3%"
   }
 });
 

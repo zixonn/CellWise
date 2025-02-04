@@ -22,9 +22,9 @@ const TabNav = ({navigation}) => {
     const color = focused ? colors.gray : colors.lightGray;
 
     return (
-      <View style={{ alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+      <View style={{ alignItems: 'center', justifyContent: 'center' }}>
         <Icon name={icon.name} type={icon.type} color={color} size={23} />
-        <Text style={{ color, fontFamily: 'Rubik-Medium', fontSize: 10, marginVertical: '1%' }}>
+        <Text style={{ color, fontFamily: 'Rubik-Medium', fontSize: 10 }}>
           {routeName}
         </Text>
       </View>

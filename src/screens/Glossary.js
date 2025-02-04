@@ -12,12 +12,12 @@ const Glossary = () => {
   return (
     <PageBody white>
       <View style={{ flex: 1, width: '100%' }}>
-        <View style={{ justifyContent: 'center', alignItems: 'center', paddingVertical: '6%' }}>
+        <View style={{ justifyContent: 'center', alignItems: 'center',marginVertical: '3%' }}>
           <TextInput
             value={search}
             onChangeText={text => setSearch(text)}
             placeholderTextColor={"darkgray"}
-            placeholder="Search"
+            placeholder="🔍 Search"
             maxLength={50}
             style={styles.input}
           />
