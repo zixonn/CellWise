@@ -18,7 +18,7 @@ const ModuleNav = () => {
           headerTitleStyle:{fontFamily:"Rubik-Medium",color:colors.white,fontSize:fontSizes.small,alignSelf:"center"},
           headerTitleAlign:"center",
           headerBackTitleVisible:false,
-          headerBackImage: () => <Icon name = "arrow-back" color={colors.white}/>
+          headerBackImage: () => <Icon containerStyle={{marginLeft:"10%"}} name = "chevron-back-outline" type='ionicon' color={colors.white}/>
           }}>
           <Stack.Screen name = "Articles" component={ArticleList}/>
           <Stack.Screen name = "Article" component={Article} options={({ route }) => ({
